@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/*
+  The design is drawn on a 1920px wide canvas. Every spacing utility is one
+  "design pixel" (w-552 = 552px in the design) and fs-* sets font sizes the
+  same way. From 1280px up the root font size follows the viewport, so the
+  desktop layout keeps the design's exact proportions on every screen; below
+  1280px one design pixel is one CSS pixel and the layout reflows instead.
+*/
+@theme {
+  --spacing: 0.0625rem;
+
+  --color-maroon: #7a2020;
+  --color-brand: #8a1e1e;
+  --color-wine: #7e1a1a;
+  --color-crimson: #98141f;
+  --color-ember: #b8383a;
+  --color-scarlet: #d2161e;
+  --color-ink: #0a323c;
+  --color-deep: #032a33;
+  --color-ocean: #022e3e;
+  --color-heading: #0b2a33;
+  --color-muted: #76828a;
+  --color-slate: #4f6068;
+  --color-cloud: #f6f6f7;
+  --color-mist: #f3f6f8;
+  --color-line: #e3e7ea;
+}
+
+@theme inline {
+  --font-jakarta: var(--ff-jakarta), sans-serif;
+  --font-poppins: var(--ff-poppins), sans-serif;
+  --font-roboto: var(--ff-roboto), sans-serif;
+  --font-inter: var(--ff-inter), sans-serif;
+}
+
+@utility fs-* {
+  font-size: calc(--value(integer) * 0.0625rem);
+}
+
+/* Border radius in design pixels: rd-8, rd-t-6, rd-l-6 */
+@utility rd-* {
+  border-radius: calc(--value(integer) * 0.0625rem);
+}
+@utility rd-t-* {
+  border-top-left-radius: calc(--value(integer) * 0.0625rem);
+  border-top-right-radius: calc(--value(integer) * 0.0625rem);
+}
+@utility rd-l-* {
+  border-top-left-radius: calc(--value(integer) * 0.0625rem);
+  border-bottom-left-radius: calc(--value(integer) * 0.0625rem);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: min(16px, calc(100vw / 120));
+  }
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-heading);
+  font-family: var(--ff-jakarta), sans-serif;
+  overflow-x: clip;
+}
+
+a[href],
+button:not(:disabled),
+[role="button"],
+select {
+  cursor: pointer;
+}
+
+/* Native select arrow and date icon are replaced by our own icons. */
+select {
+  appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Arrow-shaped cards in the "Why Choose Us" section. */
+.chevron-card {
+  clip-path: polygon(0 0, calc(100% - 2.75rem) 0, 100% 50%, calc(100% - 2.75rem) 100%, 0 100%);
+}
+
+/* Slanted number tag on the services page cards. */
+.slant-tag {
+  clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
