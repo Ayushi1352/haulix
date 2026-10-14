@@ -17,9 +17,9 @@ export default function AboutUsPage() {
       <PageBanner title={title} />
       <About detailed />
       <Stats />
-      <WhyChoose spaced />
+      <WhyChoose />
       <Cta />
-      <Testimonials last />
+      <Testimonials />
     </>
   );
 }

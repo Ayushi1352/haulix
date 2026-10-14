@@ -2,6 +2,7 @@
 
 import { Children, useEffect, useState, type ReactNode } from "react";
 import Icon from "./Icon";
+import { label as uiLabel } from "@/data";
 
 interface CarouselProps {
   children: ReactNode;
@@ -63,10 +64,10 @@ export default function Carousel({
         ))}
       </div>
 
-      <button type="button" aria-label="Previous" onClick={() => go(-1)} className={prevClass}>
+      <button type="button" aria-label={uiLabel("previous")} onClick={() => go(-1)} className={prevClass}>
         <Icon name="chevron-left" className={arrowIconClass} strokeWidth={2.6} />
       </button>
-      <button type="button" aria-label="Next" onClick={() => go(1)} className={nextClass}>
+      <button type="button" aria-label={uiLabel("next")} onClick={() => go(1)} className={nextClass}>
         <Icon name="chevron-right" className={arrowIconClass} strokeWidth={2.6} />
       </button>
 
@@ -76,11 +77,11 @@ export default function Carousel({
             <button
               key={index}
               type="button"
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={uiLabel("goToSlide", { n: index + 1 })}
               aria-current={index === start}
               onClick={() => setStart(index)}
               className={`rounded-full transition-colors ${
-                index === start ? "size-14 bg-crimson xl:size-18" : "size-12 bg-[#d6dadd] hover:bg-[#b9bfc3] xl:size-16"
+                index === start ? "size-14 bg-brand xl:size-18" : "size-12 bg-line-strong hover:bg-brand/50 xl:size-16"
               }`}
             />
           ))}

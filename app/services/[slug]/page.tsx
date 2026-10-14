@@ -21,31 +21,41 @@ export function generateStaticParams() {
   return services.items.map((item) => ({ slug: item.slug }));
 }
 
+// Breadcrumb follows the URL: Home — Services — <service name>.
+const servicesCrumb = { label: pages.services.title, href: "/services" };
+
 async function ServiceContent({ params }: Params) {
   const { slug } = await params;
   const service = services.items.find((item) => item.slug === slug);
   if (!service) notFound();
 
   return (
-    <section className="bg-white px-20 pt-48 pb-72 sm:px-40 lg:px-48 xl:px-88 xl:pt-83 xl:pb-96">
-      <div className="flex flex-col-reverse gap-48 lg:flex-row lg:items-start lg:gap-40 xl:gap-52">
-        <ServiceSidebar activeSlug={service.slug} />
-        <div className="min-w-0 flex-1">
-          <ServiceOverview service={service} />
-          <ServiceBenefits benefits={service.benefits} />
+    <>
+      <PageBanner title={service.title} crumbs={[servicesCrumb, { label: service.title }]} />
+      <section className="section-y bg-white px-20 sm:px-40 lg:px-48 xl:px-88">
+        <div className="flex flex-col-reverse gap-48 lg:flex-row lg:items-start lg:gap-40 xl:gap-52">
+          <ServiceSidebar activeSlug={service.slug} />
+          <div className="min-w-0 flex-1">
+            <ServiceOverview service={service} />
+            <ServiceBenefits benefits={service.benefits} />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
 export default function ServiceDetailPage({ params }: Params) {
   return (
-    <>
-      <PageBanner title={pages.serviceDetail.title} />
-      <Suspense fallback={<div className="min-h-600 bg-white" />}>
-        <ServiceContent params={params} />
-      </Suspense>
-    </>
+    <Suspense
+      fallback={
+        <>
+          <PageBanner title={pages.serviceDetail.title} crumbs={[servicesCrumb]} />
+          <div className="min-h-600 bg-white" />
+        </>
+      }
+    >
+      <ServiceContent params={params} />
+    </Suspense>
   );
 }

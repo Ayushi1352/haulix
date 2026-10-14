@@ -6,12 +6,11 @@ import TestimonialsHeading from "./TestimonialsHeading";
 const { testimonials } = data;
 
 const arrow =
-  "absolute top-1/2 z-10 hidden size-56 -translate-y-1/2 items-center justify-center rounded-full bg-white text-crimson shadow-[0_6px_20px_rgba(10,40,50,0.14)] transition-colors hover:bg-crimson hover:text-white md:flex xl:-mt-62 xl:size-82";
+  "absolute top-1/2 z-10 hidden size-56 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand shadow-[0_6px_20px_rgba(10,40,50,0.14)] transition-colors hover:bg-brand hover:text-white md:flex xl:-mt-62 xl:size-82";
 
-// `last`: the section sits right above the footer (About page), so it ends sooner.
-export default function Testimonials({ last = false }: { last?: boolean }) {
+export default function Testimonials() {
   return (
-    <section className={`bg-white pt-64 pb-72 sm:pt-80 xl:pt-90 ${last ? "xl:pb-100" : "xl:pb-148"}`}>
+    <section className={"section-y bg-white"}>
       <TestimonialsHeading />
       <div className="mx-auto mt-32 max-w-1900 px-20 sm:px-40 md:px-88 xl:mt-38 xl:px-136">
         <Carousel

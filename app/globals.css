@@ -3,35 +3,42 @@
 /*
   The design is drawn on a 1920px wide canvas. Every spacing utility is one
   "design pixel" (w-552 = 552px in the design) and fs-* sets font sizes the
-  same way. From 1280px up the root font size follows the viewport, so the
+  same way. From 1024px up the root font size follows the viewport, so the
   desktop layout keeps the design's exact proportions on every screen; below
-  1280px one design pixel is one CSS pixel and the layout reflows instead.
+  1024px one design pixel is one CSS pixel and the layout reflows instead.
 */
 @theme {
   --spacing: 0.0625rem;
-
-  --color-maroon: #7a2020;
-  --color-brand: #8a1e1e;
-  --color-wine: #7e1a1a;
-  --color-crimson: #98141f;
-  --color-ember: #b8383a;
-  --color-scarlet: #d2161e;
-  --color-ink: #0a323c;
-  --color-deep: #032a33;
-  --color-ocean: #022e3e;
-  --color-heading: #0b2a33;
-  --color-muted: #76828a;
-  --color-slate: #4f6068;
-  --color-cloud: #f6f6f7;
-  --color-mist: #f3f6f8;
-  --color-line: #e3e7ea;
+  /* Desktop layout (xl:) starts at 1024px, so 1024 shows the same design as 1440. */
+  --breakpoint-xl: 64rem;
 }
 
+/*
+  Colors and fonts come from "theme" in data/site.json: the root layout
+  writes them onto <html> as --theme-* variables (see themeStyle in data).
+*/
 @theme inline {
-  --font-jakarta: var(--ff-jakarta), sans-serif;
-  --font-poppins: var(--ff-poppins), sans-serif;
-  --font-roboto: var(--ff-roboto), sans-serif;
-  --font-inter: var(--ff-inter), sans-serif;
+  --color-brand: var(--theme-brand);
+  /* Hover is the brand color a little lighter, so it follows any brand color. */
+  --color-brand-hover: oklch(from var(--theme-brand) calc(l + 0.06) c h);
+  --color-ink: var(--theme-ink);
+  --color-deep: var(--theme-deep);
+  --color-ocean: var(--theme-ocean);
+  --color-heading: var(--theme-heading);
+  /* Text greys, darkest to lightest */
+  --color-graphite: var(--theme-graphite);
+  --color-slate: var(--theme-slate);
+  --color-steel: var(--theme-steel);
+  --color-muted: var(--theme-muted);
+  --color-line-strong: var(--theme-line-strong);
+  --color-cloud: var(--theme-cloud);
+  --color-mist: var(--theme-mist);
+  --color-line: var(--theme-line);
+
+  --font-heading: var(--theme-font-heading), sans-serif;
+  --font-body: var(--theme-font-body), sans-serif;
+  --font-nav: var(--theme-font-nav), sans-serif;
+  --font-display: var(--theme-font-display), sans-serif;
 }
 
 @utility fs-* {
@@ -51,12 +58,32 @@
   border-bottom-left-radius: calc(--value(integer) * 0.0625rem);
 }
 
+/*
+  One vertical rhythm for every content section on every page:
+  64px on phones, 80px from 640px (tablets), and 120 design
+  pixels from 1024px (64px at 1024 growing to 120px at 1920).
+*/
+@utility section-y {
+  padding-block: calc(var(--spacing) * 64);
+  @media (min-width: 640px) {
+    padding-block: calc(var(--spacing) * 80);
+  }
+  @media (min-width: 1024px) {
+    padding-block: calc(var(--spacing) * 120);
+  }
+}
+
+/* Two white sections in a row share one gap instead of stacking two. */
+.section-y.bg-white + .section-y.bg-white {
+  padding-top: 0;
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   html {
     font-size: min(16px, calc(100vw / 120));
   }
@@ -65,7 +92,7 @@ html {
 body {
   background: #ffffff;
   color: var(--color-heading);
-  font-family: var(--ff-jakarta), sans-serif;
+  font-family: var(--font-heading);
   overflow-x: clip;
 }
 

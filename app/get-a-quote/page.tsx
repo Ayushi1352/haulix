@@ -15,7 +15,7 @@ export default function GetAQuotePage() {
   return (
     <>
       <PageBanner title={title} />
-      <section className="bg-white px-20 pt-64 pb-72 sm:px-40 sm:pt-80 lg:px-48 xl:px-95 xl:pt-92 xl:pb-103">
+      <section className="section-y bg-white px-20 sm:px-40 lg:px-48 xl:px-95">
         <PageIntro label={quote.label} title={quote.title} highlight={quote.titleHighlight} description={quote.description} />
         <div className="mt-36 flex flex-col gap-24 lg:flex-row lg:items-start xl:mt-40 xl:gap-34">
           <div className="lg:w-[52%] xl:w-861 xl:shrink-0">

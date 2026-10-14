@@ -6,11 +6,11 @@ import BlogsHeading from "./BlogsHeading";
 const { blog } = data;
 
 const arrow =
-  "absolute top-1/2 z-10 hidden size-52 -translate-y-1/2 items-center justify-center rounded-full bg-white text-crimson shadow-[0_6px_20px_rgba(10,40,50,0.14)] transition-colors hover:bg-crimson hover:text-white md:flex xl:-mt-43 xl:size-68";
+  "absolute top-1/2 z-10 hidden size-52 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand shadow-[0_6px_20px_rgba(10,40,50,0.14)] transition-colors hover:bg-brand hover:text-white md:flex xl:-mt-43 xl:size-68";
 
 export default function Blogs() {
   return (
-    <section className="bg-white pb-72 xl:pb-93">
+    <section className="section-y bg-white">
       <BlogsHeading />
       <div className="mx-auto mt-32 px-20 sm:px-40 md:px-84 xl:mt-43 xl:pr-96 xl:pl-118">
         <Carousel

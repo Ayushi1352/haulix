@@ -8,6 +8,7 @@ const stroke: Record<string, ReactNode> = {
   "chevron-down": <path d="m6 9 6 6 6-6" />,
   menu: <path d="M3 6h18M3 12h18M3 18h18" />,
   close: <path d="M18 6 6 18M6 6l12 12" />,
+  check: <path d="m5 12.5 4.5 4.5L19 7.5" />,
   user: (
     <>
       <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
