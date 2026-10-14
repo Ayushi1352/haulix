@@ -10,9 +10,10 @@ interface LabelProps {
 export function SectionLabel({ text, align = "center", lineClass = "w-55 h-5 bg-brand", className = "" }: LabelProps) {
   return (
     <p
+      data-reveal="left"
       className={`flex items-center gap-14 uppercase xl:gap-23 ${align === "center" ? "justify-center" : ""} ${className}`}
     >
-      <span className={`shrink-0 ${lineClass}`} />
+      <span className={`reveal-line shrink-0 ${lineClass}`} />
       <span>{text}</span>
     </p>
   );

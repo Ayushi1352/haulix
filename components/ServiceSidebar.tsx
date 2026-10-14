@@ -12,7 +12,7 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug: string }) {
 
   return (
     <aside className="flex w-full flex-col gap-28 lg:w-360 lg:shrink-0 xl:w-479 xl:gap-36">
-      <div className="overflow-hidden rd-6 bg-white shadow-[0_6px_24px_rgba(10,40,50,0.08)]">
+      <div data-reveal="left" className="overflow-hidden rd-6 bg-white shadow-[0_6px_24px_rgba(10,40,50,0.08)]">
         <h2 className="flex h-64 items-center bg-deep px-24 font-heading fs-20 font-extrabold text-white xl:h-91 xl:px-33 xl:fs-28">
           {detail.sidebarTitle}
         </h2>
@@ -24,14 +24,14 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug: string }) {
                 <Link
                   href={`/services/${item.slug}`}
                   aria-current={isActive ? "page" : undefined}
-                  className={`flex h-56 items-center justify-between px-20 fs-16 transition-colors xl:h-82 xl:px-30 xl:fs-24 ${
+                  className={`group flex h-56 items-center justify-between px-20 fs-16 transition-colors xl:h-82 xl:px-30 xl:fs-24 ${
                     isActive
                       ? "rd-4 bg-brand font-heading font-semibold text-white shadow-[0_6px_14px_color-mix(in_srgb,var(--color-brand)_30%,transparent)]"
                       : "font-body text-slate hover:text-brand"
                   }`}
                 >
                   {item.navLabel}
-                  <Icon name="chevron-right" className="size-18 xl:size-26" strokeWidth={2} />
+                  <Icon name="chevron-right" className="size-18 transition-transform group-hover:translate-x-4 xl:size-26" strokeWidth={2} />
                 </Link>
               </li>
             );
@@ -39,7 +39,7 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug: string }) {
         </ul>
       </div>
 
-      <div className="overflow-hidden rd-6 bg-deep text-white shadow-[0_6px_24px_rgba(10,40,50,0.12)]">
+      <div data-reveal="left" className="overflow-hidden rd-6 bg-deep text-white [--delay:200ms] shadow-[0_6px_24px_rgba(10,40,50,0.12)]">
         <h2 className="flex h-68 items-center border-b border-white/25 px-24 font-heading fs-20 font-extrabold xl:h-97 xl:px-33 xl:fs-28">
           {detail.contactTitle}
         </h2>
@@ -48,7 +48,7 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug: string }) {
             const { lines, type } = contactField(item.field);
             return (
               <li key={item.label} className="flex items-start gap-18 xl:gap-28">
-                <span className="flex size-60 shrink-0 items-center justify-center rounded-full bg-brand xl:size-85">
+                <span className="pulse-ring flex size-60 shrink-0 items-center justify-center rounded-full bg-brand xl:size-85">
                   <Icon name={item.icon} className="size-26 xl:size-38" />
                 </span>
                 <div>

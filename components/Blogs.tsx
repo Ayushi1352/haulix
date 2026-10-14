@@ -12,7 +12,7 @@ export default function Blogs() {
   return (
     <section className="section-y bg-white">
       <BlogsHeading />
-      <div className="mx-auto mt-32 px-20 sm:px-40 md:px-84 xl:mt-43 xl:pr-96 xl:pl-118">
+      <div data-reveal="up" className="mx-auto mt-32 px-20 [--delay:250ms] sm:px-40 md:px-84 xl:mt-43 xl:pr-96 xl:pl-118">
         <Carousel
           label={blog.label}
           gridClass="grid gap-24 md:grid-cols-2 xl:grid-cols-4 xl:gap-27"

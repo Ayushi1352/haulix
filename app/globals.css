@@ -141,3 +141,195 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 1;
   }
 }
+
+/* ---------- Animations ---------- */
+
+/* Entrance and ambient animations, used as motion-safe:animate-* utilities. */
+@theme {
+  --animate-intro-up: intro-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-line-grow: line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-kenburns: kenburns 2.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-slow-zoom: slow-zoom 18s ease-in-out infinite alternate;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-drive: drive 1.6s ease-in-out infinite alternate;
+  --animate-ring: ring 2.6s ease-in-out infinite;
+  --animate-pop: pop 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-stripes: stripes 6s ease-in-out infinite alternate;
+
+  @keyframes intro-up {
+    from {
+      opacity: 0;
+      transform: translateY(2.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes line-grow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: none;
+    }
+  }
+  @keyframes kenburns {
+    from {
+      transform: scale(1.12);
+    }
+    to {
+      transform: none;
+    }
+  }
+  @keyframes slow-zoom {
+    to {
+      transform: scale(1.08);
+    }
+  }
+  @keyframes float {
+    50% {
+      transform: translateY(-0.75rem);
+    }
+  }
+  /* A truck rolling back and forth on the spot. */
+  @keyframes drive {
+    from {
+      transform: translateX(-0.25rem);
+    }
+    to {
+      transform: translateX(0.35rem);
+    }
+  }
+  /* A phone that rings now and then. */
+  @keyframes ring {
+    0%,
+    60%,
+    100% {
+      transform: none;
+    }
+    64%,
+    72%,
+    80% {
+      transform: rotate(-14deg);
+    }
+    68%,
+    76%,
+    84% {
+      transform: rotate(14deg);
+    }
+  }
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  /* Uses translate, not transform, so the stripes keep their skew. */
+  @keyframes stripes {
+    to {
+      translate: -2.5rem 0;
+    }
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+}
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+}
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(4rem);
+  }
+}
+@keyframes reveal-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+}
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes pulse-ring {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+/*
+  Scroll reveal. ScrollReveal (components/ScrollReveal.tsx) sets data-in-view on
+  every [data-reveal] / [data-reveal-stagger] element once it scrolls into view.
+  data-reveal="up|left|right|zoom|fade" animates the element itself (delay via
+  --delay); data-reveal-stagger animates its children one after another.
+  Without JavaScript, or with reduced motion, everything simply stays visible.
+*/
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal]:not([data-in-view]),
+  [data-reveal-stagger]:not([data-in-view]) > * {
+    opacity: 0;
+  }
+  [data-reveal][data-in-view],
+  [data-reveal-stagger][data-in-view] > * {
+    animation: reveal-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms) both;
+  }
+  [data-reveal="left"][data-in-view] {
+    animation-name: reveal-left;
+  }
+  [data-reveal="right"][data-in-view] {
+    animation-name: reveal-right;
+  }
+  [data-reveal="zoom"][data-in-view] {
+    animation-name: reveal-zoom;
+  }
+  [data-reveal="fade"][data-in-view] {
+    animation-name: reveal-fade;
+  }
+  [data-reveal-stagger][data-in-view] > :nth-child(2) { --delay: 100ms; }
+  [data-reveal-stagger][data-in-view] > :nth-child(3) { --delay: 200ms; }
+  [data-reveal-stagger][data-in-view] > :nth-child(4) { --delay: 300ms; }
+  [data-reveal-stagger][data-in-view] > :nth-child(5) { --delay: 400ms; }
+  [data-reveal-stagger][data-in-view] > :nth-child(6) { --delay: 500ms; }
+  [data-reveal-stagger][data-in-view] > :nth-child(7) { --delay: 600ms; }
+  [data-reveal-stagger][data-in-view] > :nth-child(n + 8) { --delay: 700ms; }
+
+  /* The short line of a "—— LABEL" eyebrow draws itself in. */
+  [data-reveal][data-in-view] .reveal-line {
+    transform-origin: left;
+    animation: line-grow 0.8s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--delay, 0ms) + 250ms) both;
+  }
+
+  /* Expanding ring around round icon badges. */
+  .pulse-ring {
+    position: relative;
+  }
+  .pulse-ring::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid var(--color-brand);
+    pointer-events: none;
+    animation: pulse-ring 2.2s ease-out infinite;
+  }
+}

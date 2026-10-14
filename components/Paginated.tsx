@@ -29,7 +29,9 @@ export default function Paginated({ children, perPage, className, as: List = "ul
 
   return (
     <div ref={top} className="scroll-mt-100 sm:scroll-mt-112 xl:scroll-mt-176">
-      <List className={className}>{items.slice(current * perPage, (current + 1) * perPage)}</List>
+      <List key={current} data-reveal-stagger className={className}>
+        {items.slice(current * perPage, (current + 1) * perPage)}
+      </List>
       {pageCount > 1 && <Pagination page={current} pageCount={pageCount} onChange={go} />}
     </div>
   );

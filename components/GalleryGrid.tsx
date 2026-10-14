@@ -38,10 +38,10 @@ export default function GalleryGrid() {
           lineClass="h-2 w-44 bg-brand xl:h-3 xl:w-55"
           className="font-heading fs-14 font-bold tracking-[0.08em] text-ink xl:fs-16"
         />
-        <h2 className="mt-12 font-heading fs-34 leading-42 font-extrabold tracking-[-0.025em] text-ink sm:fs-46 sm:leading-54 xl:mt-14 xl:fs-65 xl:leading-72">
+        <h2 data-reveal="up" className="mt-12 [--delay:100ms] font-heading fs-34 leading-42 font-extrabold tracking-[-0.025em] text-ink sm:fs-46 sm:leading-54 xl:mt-14 xl:fs-65 xl:leading-72">
           <Highlight text={gallery.title} highlight={gallery.titleHighlight} highlightClass="text-brand" />
         </h2>
-        <p className="mx-auto mt-10 max-w-760 font-heading fs-15 leading-25 font-medium text-steel xl:mt-12 xl:max-w-none xl:fs-20 xl:leading-29 xl:whitespace-pre-line">
+        <p data-reveal="up" className="mx-auto mt-10 max-w-760 [--delay:200ms] font-heading fs-15 leading-25 font-medium text-steel xl:mt-12 xl:max-w-none xl:fs-20 xl:leading-29 xl:whitespace-pre-line">
           {gallery.description}
         </p>
       </div>
@@ -60,8 +60,9 @@ export default function GalleryGrid() {
                 alt={image.label}
                 fill
                 sizes="(min-width: 1024px) 23vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
+              <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,color-mix(in_srgb,var(--color-ocean)_55%,transparent))] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </button>
           </li>
         ))}
@@ -73,9 +74,9 @@ export default function GalleryGrid() {
           aria-modal="true"
           aria-label={images[open].label}
           onClick={() => setOpen(null)}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[color-mix(in_srgb,var(--color-deep)_90%,transparent)] p-16 sm:p-48"
+          className="fixed inset-0 z-[100] flex animate-[fade_0.3s_ease-out] items-center justify-center bg-[color-mix(in_srgb,var(--color-deep)_90%,transparent)] p-16 sm:p-48"
         >
-          <div className="relative h-full max-h-[80vh] w-full max-w-1300" onClick={(event) => event.stopPropagation()}>
+          <div key={open} className="relative h-full max-h-[80vh] w-full max-w-1300 motion-safe:animate-pop" onClick={(event) => event.stopPropagation()}>
             <Image src={images[open].image} alt={images[open].label} fill sizes="90vw" className="object-contain" />
           </div>
           <button

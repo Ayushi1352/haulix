@@ -32,15 +32,15 @@ export default function Services() {
           lineClass="h-4 w-44 bg-brand xl:h-5 xl:w-55"
           className="font-body fs-14 font-medium tracking-[0.26em] text-heading/85 xl:fs-17"
         />
-        <h2 className="mt-14 font-heading fs-32 leading-40 font-extrabold tracking-[-0.03em] text-ink sm:fs-44 sm:leading-52 xl:mt-1 xl:fs-57 xl:leading-64">
+        <h2 data-reveal="up" className="mt-14 [--delay:100ms] font-heading fs-32 leading-40 font-extrabold tracking-[-0.03em] text-ink sm:fs-44 sm:leading-52 xl:mt-1 xl:fs-57 xl:leading-64">
           <Highlight text={services.title} highlight={services.titleHighlight} />
         </h2>
-        <p className="mx-auto mt-12 max-w-900 font-body fs-15 leading-24 text-steel xl:mt-14 xl:max-w-none xl:fs-16 xl:leading-23 xl:tracking-[-0.01em] xl:whitespace-pre-line">
+        <p data-reveal="up" className="mx-auto mt-12 max-w-900 [--delay:200ms] font-body fs-15 leading-24 text-steel xl:mt-14 xl:max-w-none xl:fs-16 xl:leading-23 xl:tracking-[-0.01em] xl:whitespace-pre-line">
           {services.description}
         </p>
       </div>
 
-      <div className="mt-36 grid gap-2 sm:grid-cols-2 xl:mt-25 xl:grid-cols-4">
+      <div data-reveal-stagger className="mt-36 grid gap-2 sm:grid-cols-2 xl:mt-25 xl:grid-cols-4">
         {cards.map((card, index) => (
           <Link
             key={card.href}
@@ -55,13 +55,13 @@ export default function Services() {
               className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_30%,color-mix(in_srgb,var(--color-ocean)_82%,transparent)_55%,var(--color-ocean)_72%)]" />
-            <span className="absolute top-18 right-20 xl:top-21 xl:right-26">
+            <span className="absolute top-18 right-20 transition-[translate] duration-300 group-hover:translate-x-6 group-hover:-translate-y-6 xl:top-21 xl:right-26">
               <CornerArrow />
             </span>
             <div className="absolute inset-x-0 bottom-0 px-28 pb-30 text-white xl:top-300 xl:bottom-auto xl:pr-30 xl:pl-65 xl:pb-0">
               <p className="flex items-center gap-12 font-heading fs-17 font-bold xl:gap-14 xl:fs-21">
                 {String(index + 1).padStart(2, "0")}
-                <span className="h-2 w-40 bg-white/70 xl:w-48" />
+                <span className="h-2 w-40 bg-white/70 transition-[width,background-color] duration-300 group-hover:w-64 group-hover:bg-brand xl:w-48 xl:group-hover:w-80" />
               </p>
               <h3 className="mt-10 font-heading fs-28 leading-30 font-extrabold whitespace-pre-line xl:mt-14 xl:fs-38 xl:leading-35">
                 {card.title}

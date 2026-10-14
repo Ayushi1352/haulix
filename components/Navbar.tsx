@@ -102,7 +102,9 @@ export default function Navbar() {
                       href={link.href}
                       aria-current={active ? "page" : undefined}
                       className={`relative block font-nav fs-24 leading-34 font-medium transition-colors hover:text-brand ${
-                        active ? "text-brand" : "text-ink"
+                        active
+                          ? "text-brand"
+                          : "text-ink after:absolute after:inset-x-0 after:top-full after:mt-11 after:h-6 after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 hover:after:scale-x-100"
                       }`}
                     >
                       {link.label}
@@ -118,10 +120,10 @@ export default function Navbar() {
             <span className="hidden h-86 w-2 bg-line xl:mr-38 xl:block" />
             <Link
               href={button.href}
-              className="hidden h-44 items-center justify-center gap-10 rounded-full border border-brand bg-brand px-22 font-nav fs-15 font-medium text-white transition-colors hover:bg-white hover:text-brand sm:inline-flex xl:mt-6 xl:h-82 xl:w-252 xl:gap-16 xl:px-0 xl:fs-25"
+              className="group hidden h-44 items-center justify-center gap-10 rounded-full border border-brand bg-brand px-22 font-nav fs-15 font-medium text-white transition-colors hover:bg-white hover:text-brand sm:inline-flex xl:mt-6 xl:h-82 xl:w-252 xl:gap-16 xl:px-0 xl:fs-25"
             >
               {button.label}
-              <Icon name="arrow-right" className="size-16 xl:size-26" strokeWidth={2} />
+              <Icon name="arrow-right" className="size-16 transition-transform group-hover:translate-x-4 xl:size-26" strokeWidth={2} />
             </Link>
             <button
               type="button"

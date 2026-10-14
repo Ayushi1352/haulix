@@ -6,7 +6,7 @@ import { site as data, formatDate, type BlogPost } from "@/data";
 export default function BlogCard({ post }: { post: BlogPost }) {
   const href = `/blogs/${post.slug}`;
   return (
-    <article className="group flex h-full flex-col overflow-hidden rd-6 bg-white shadow-[0_6px_26px_rgba(10,40,50,0.08)] xl:h-564">
+    <article className="group flex h-full flex-col overflow-hidden rd-6 bg-white shadow-[0_6px_26px_rgba(10,40,50,0.08)] transition-[translate,box-shadow] duration-300 hover:-translate-y-6 hover:shadow-[0_20px_44px_rgba(10,40,50,0.14)] xl:h-564">
       <Link href={href} className="relative block h-210 shrink-0 overflow-hidden xl:h-227" tabIndex={-1} aria-hidden="true">
         <Image
           src={post.image}

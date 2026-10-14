@@ -8,13 +8,13 @@ const { contact, company } = data;
 export default function ContactDetails() {
   return (
     <div className="flex min-w-0 flex-1 flex-col gap-20 xl:gap-22">
-      <ul className="grid grid-cols-2 gap-8 md:grid-cols-3 xl:gap-7 [&>li:last-child]:col-span-2 md:[&>li:last-child]:col-span-1">
+      <ul data-reveal-stagger className="grid grid-cols-2 gap-8 md:grid-cols-3 xl:gap-7 [&>li:last-child]:col-span-2 md:[&>li:last-child]:col-span-1">
         {contact.infoCards.map((card) => {
           const { lines, type } = contactField(card.field);
           const note = card.showTiming ? company.timing : card.note;
           const body = (
             <>
-              <span className="mx-auto flex size-48 items-center justify-center rounded-full bg-brand text-white xl:size-57">
+              <span className="mx-auto flex size-48 items-center justify-center rounded-full bg-brand text-white transition-[rotate] duration-700 group-hover:rotate-[360deg] xl:size-57">
                 <Icon name={card.icon} className="size-22 xl:size-27" />
               </span>
               <span className="mt-12 block font-heading fs-15 font-bold text-ink xl:mt-16 xl:fs-18">{card.title}</span>
@@ -36,7 +36,7 @@ export default function ContactDetails() {
           return (
             <li key={card.title}>
               {href ? (
-                <a href={href} className={`${box} group transition-[box-shadow,border-color] hover:border-brand hover:shadow-[0_10px_24px_rgba(10,40,50,0.1)]`}>
+                <a href={href} className={`${box} group transition-[box-shadow,border-color,translate] duration-300 hover:-translate-y-4 hover:border-brand hover:shadow-[0_10px_24px_rgba(10,40,50,0.1)]`}>
                   {body}
                 </a>
               ) : (
@@ -47,11 +47,11 @@ export default function ContactDetails() {
         })}
       </ul>
 
-      <div className="relative h-200 overflow-hidden rd-4 sm:h-268 xl:mt-7 xl:h-268">
-        <Image src={contact.image} alt={contact.imageAlt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+      <div data-reveal="zoom" className="relative h-200 overflow-hidden rd-4 sm:h-268 xl:mt-7 xl:h-268">
+        <Image src={contact.image} alt={contact.imageAlt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover transition-transform duration-700 hover:scale-105" />
       </div>
 
-      <div className="relative h-200 overflow-hidden rd-4 sm:h-235">
+      <div data-reveal="up" className="relative h-200 overflow-hidden rd-4 sm:h-235">
         <iframe
           src={companyMap.embed}
           title={contact.map.alt}

@@ -12,7 +12,7 @@ export default function Testimonials() {
   return (
     <section className={"section-y bg-white"}>
       <TestimonialsHeading />
-      <div className="mx-auto mt-32 max-w-1900 px-20 sm:px-40 md:px-88 xl:mt-38 xl:px-136">
+      <div data-reveal="up" className="mx-auto mt-32 max-w-1900 [--delay:250ms] px-20 sm:px-40 md:px-88 xl:mt-38 xl:px-136">
         <Carousel
           label={testimonials.label}
           gridClass="grid gap-24 md:grid-cols-2 xl:grid-cols-3 xl:gap-33"

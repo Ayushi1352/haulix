@@ -112,7 +112,7 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
     "w-full rd-3 border border-line bg-white pl-48 font-heading fs-15 font-medium text-ink outline-none transition-colors placeholder:text-steel focus:border-brand xl:pl-60 xl:fs-17";
 
   return (
-    <div className="rd-6 border border-line bg-cloud px-20 py-28 sm:px-32 xl:px-36 xl:pt-30 xl:pb-38">
+    <div data-reveal="left" className="rd-6 border border-line bg-cloud px-20 py-28 sm:px-32 xl:px-36 xl:pt-30 xl:pb-38">
       <h2 className="font-heading fs-28 leading-36 font-extrabold tracking-[-0.025em] text-ink xl:fs-41 xl:leading-50">
         <Highlight text={form.title} highlight={form.titleHighlight} highlightClass="text-brand" />
       </h2>
@@ -128,10 +128,10 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
           const border = invalid ? "border-brand" : "";
 
           return (
-            <div key={field.name} className={`relative ${field.full ? "sm:col-span-2" : ""}`}>
+            <div key={field.name} className={`group/field relative ${field.full ? "sm:col-span-2" : ""}`}>
               <Icon
                 name={field.icon}
-                className={`pointer-events-none absolute left-16 size-18 text-steel xl:left-22 xl:size-20 ${
+                className={`pointer-events-none absolute left-16 size-18 text-steel transition-colors group-focus-within/field:text-brand xl:left-22 xl:size-20 ${
                   field.type === "textarea" ? "top-18 xl:top-22" : "top-1/2 -translate-y-1/2"
                 }`}
                 strokeWidth={1.6}
@@ -200,7 +200,7 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
           <button
             type="submit"
             disabled={status === "sending"}
-            className={`mt-4 inline-flex w-full items-center justify-center gap-16 rd-3 border border-brand bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] font-heading fs-16 font-bold tracking-[0.14em] text-white shadow-[0_8px_20px_color-mix(in_srgb,var(--color-brand)_25%,transparent)] transition-colors hover:bg-white hover:bg-none hover:text-brand disabled:cursor-wait disabled:opacity-80 disabled:hover:bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] disabled:hover:text-white xl:gap-26 xl:fs-19 ${
+            className={`group mt-4 inline-flex w-full items-center justify-center gap-16 rd-3 border border-brand bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] font-heading fs-16 font-bold tracking-[0.14em] text-white shadow-[0_8px_20px_color-mix(in_srgb,var(--color-brand)_25%,transparent)] transition-colors hover:bg-white hover:bg-none hover:text-brand disabled:cursor-wait disabled:opacity-80 disabled:hover:bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] disabled:hover:text-white xl:gap-26 xl:fs-19 ${
               compact ? "h-56 xl:mt-0 xl:h-68" : "h-58 xl:mt-5 xl:h-64"
             }`}
           >
@@ -212,7 +212,7 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
             ) : (
               <>
                 {form.button}
-                <Icon name="arrow-right" className="size-20 xl:size-26" strokeWidth={2.2} />
+                <Icon name="arrow-right" className="size-20 transition-transform group-hover:translate-x-6 xl:size-26" strokeWidth={2.2} />
               </>
             )}
           </button>

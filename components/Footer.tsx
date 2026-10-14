@@ -46,7 +46,7 @@ function LinkColumn({ title, links }: { title: string; links: { label: string; h
 export default function Footer() {
   return (
     <footer className="bg-deep text-white">
-      <div className="grid gap-40 px-20 pt-56 pb-44 sm:grid-cols-2 sm:gap-x-48 sm:px-40 lg:px-64 xl:grid-cols-[37.75rem_20.375rem_25.25rem_1fr] xl:gap-0 xl:pr-40 xl:pl-93 xl:pt-54 xl:pb-49">
+      <div data-reveal-stagger className="grid gap-40 px-20 pt-56 pb-44 sm:grid-cols-2 sm:gap-x-48 sm:px-40 lg:px-64 xl:grid-cols-[37.75rem_20.375rem_25.25rem_1fr] xl:gap-0 xl:pr-40 xl:pl-93 xl:pt-54 xl:pb-49">
         <div>
           <Link href="/" aria-label={site.name} className="block w-260 xl:mt-8 xl:w-465">
             <Image
@@ -69,7 +69,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="flex size-44 items-center justify-center rounded-full border-2 border-white/85 transition-colors hover:border-brand hover:bg-brand xl:size-55"
+                  className="flex size-44 items-center justify-center rounded-full border-2 border-white/85 transition-[background-color,border-color,translate] duration-300 hover:-translate-y-4 hover:border-brand hover:bg-brand xl:size-55"
                 >
                   <Icon name={social.icon} className="size-18 xl:size-24" strokeWidth={2} />
                 </a>
@@ -89,8 +89,8 @@ export default function Footer() {
           <ul className="mt-24 flex flex-col gap-22 xl:mt-32 xl:gap-31">
             {contactItems.map(({ icon, lines, type }) => {
               return (
-                <li key={icon} className="flex items-center gap-18 xl:gap-31">
-                  <span className="flex size-50 shrink-0 items-center justify-center rounded-full bg-brand xl:size-62">
+                <li key={icon} className="group flex items-center gap-18 xl:gap-31">
+                  <span className="flex size-50 shrink-0 items-center justify-center rounded-full bg-brand transition-[rotate] duration-700 group-hover:rotate-[360deg] xl:size-62">
                     <Icon name={icon} className="size-22 xl:size-27" />
                   </span>
                   <span className="flex flex-col font-body fs-15 leading-24 text-white/90 xl:fs-19 xl:leading-29">
