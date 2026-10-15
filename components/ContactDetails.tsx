@@ -14,7 +14,7 @@ export default function ContactDetails() {
           const note = card.showTiming ? company.timing : card.note;
           const body = (
             <>
-              <span className="mx-auto flex size-48 items-center justify-center rounded-full bg-brand text-white transition-[rotate] duration-700 group-hover:rotate-[360deg] xl:size-57">
+              <span className="mx-auto flex size-48 items-center justify-center rounded-full bg-brand text-white transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-57">
                 <Icon name={card.icon} className="size-22 xl:size-27" />
               </span>
               <span className="mt-12 block font-heading fs-15 font-bold text-ink xl:mt-16 xl:fs-18">{card.title}</span>

@@ -47,8 +47,8 @@ export default function ServiceSidebar({ activeSlug }: { activeSlug: string }) {
           {detail.contact.map((item) => {
             const { lines, type } = contactField(item.field);
             return (
-              <li key={item.label} className="flex items-start gap-18 xl:gap-28">
-                <span className="pulse-ring flex size-60 shrink-0 items-center justify-center rounded-full bg-brand xl:size-85">
+              <li key={item.label} className="group flex items-start gap-18 xl:gap-28">
+                <span className="pulse-ring flex size-60 shrink-0 items-center justify-center rounded-full bg-brand transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-85">
                   <Icon name={item.icon} className="size-26 xl:size-38" />
                 </span>
                 <div>

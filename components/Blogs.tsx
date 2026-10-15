@@ -15,8 +15,7 @@ export default function Blogs() {
       <div data-reveal="up" className="mx-auto mt-32 px-20 [--delay:250ms] sm:px-40 md:px-84 xl:mt-43 xl:pr-96 xl:pl-118">
         <Carousel
           label={blog.label}
-          gridClass="grid gap-24 md:grid-cols-2 xl:grid-cols-4 xl:gap-27"
-          slots={["", "hidden md:block", "hidden xl:block", "hidden xl:block"]}
+          trackClass="[--n:1] md:[--n:2] xl:[--n:4] [--gap:calc(var(--spacing)*24)] xl:[--gap:calc(var(--spacing)*27)]"
           prevClass={`${arrow} md:-left-64 xl:-left-86`}
           nextClass={`${arrow} md:-right-64 xl:-right-85`}
           arrowIconClass="size-22 xl:size-28"

@@ -80,7 +80,7 @@ export default function About({ detailed = false }: { detailed?: boolean }) {
               <div data-reveal-stagger className="mt-28 grid gap-14 sm:grid-cols-3 xl:mt-38 xl:gap-23">
                 {about.features.map((feature) => (
                   <div key={feature.title} className="group rd-12 bg-cloud transition-[translate,box-shadow] duration-300 hover:-translate-y-6 hover:shadow-[0_18px_40px_rgba(10,40,50,0.1)] px-20 py-18 xl:h-221 xl:px-25 xl:pt-17">
-                    <span className="flex size-52 items-center justify-center rounded-full bg-brand text-white transition-[rotate] duration-700 group-hover:rotate-[360deg] xl:size-68">
+                    <span className="flex size-52 items-center justify-center rounded-full bg-brand text-white transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-68">
                       <Icon name={feature.icon} className="size-26 xl:size-34" strokeWidth={1.6} />
                     </span>
                     <h3 className="mt-14 font-heading fs-18 leading-26 font-bold text-heading xl:mt-24 xl:fs-22 xl:leading-30">

@@ -21,8 +21,8 @@ export default function QuoteAside() {
         />
         <ul data-reveal="right" className="absolute top-16 right-0 flex w-210 [--delay:350ms] flex-col gap-16 sm:top-20 sm:w-250 sm:gap-22 rd-l-6 bg-white/92 px-22 py-26 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:flex xl:top-72 xl:w-292 xl:gap-26 xl:px-25 xl:py-30">
           {quote.imagePoints.map((point) => (
-            <li key={point.title} className="flex items-center gap-14 xl:gap-18">
-              <Icon name={point.icon} className="size-30 shrink-0 text-brand xl:size-36" strokeWidth={1.6} />
+            <li key={point.title} className="group flex items-center gap-14 xl:gap-18">
+              <Icon name={point.icon} className="size-30 shrink-0 text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-36" strokeWidth={1.6} />
               <span>
                 <span className="block font-heading fs-15 font-bold text-ink xl:fs-17">{point.title}</span>
                 <span className="mt-2 block font-body fs-13 text-steel xl:fs-14 xl:whitespace-nowrap">{point.description}</span>

@@ -18,10 +18,10 @@ export default function BlogCard({ post }: { post: BlogPost }) {
       </Link>
       <div className="flex flex-1 flex-col px-22 pt-20 pb-24 xl:pr-14 xl:pl-31 xl:pt-18 xl:pb-30">
         <p className="flex items-center font-body fs-14 text-muted xl:fs-18">
-          <Icon name="calendar" className="mr-8 size-16 text-brand xl:mr-10 xl:size-19" />
+          <Icon name="calendar" className="mr-8 size-16 text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-12 group-hover:scale-125 xl:mr-10 xl:size-19" />
           {formatDate(post.date)}
           <span className="mx-18 h-18 w-2 bg-line-strong xl:mx-30 xl:h-24" />
-          <Icon name="message" className="mr-8 size-16 text-brand xl:mr-10 xl:size-19" />
+          <Icon name="message" className="mr-8 size-16 text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-12 group-hover:scale-125 xl:mr-10 xl:size-19" />
           <span className="font-semibold text-brand">{String(post.comments).padStart(2, "0")}</span>
         </p>
         <h3 className="mt-14 font-heading fs-19 leading-26 font-bold tracking-[-0.01em] text-ink xl:mt-18 xl:fs-26 xl:leading-34">

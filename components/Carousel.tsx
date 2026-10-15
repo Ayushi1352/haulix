@@ -1,15 +1,16 @@
 "use client";
 
-import { Children, useEffect, useState, type ReactNode } from "react";
+import { Children, useCallback, useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Icon from "./Icon";
 import { label as uiLabel } from "@/data";
 
 interface CarouselProps {
   children: ReactNode;
-  /** Grid classes for the visible row, e.g. "grid gap-24 md:grid-cols-2 xl:grid-cols-3". */
-  gridClass: string;
-  /** Visibility class per position (e.g. ["", "hidden md:block"]); later positions are hidden. */
-  slots: string[];
+  /**
+   * Sets --n (cards in view) and --gap per breakpoint, e.g.
+   * "[--n:1] md:[--n:2] xl:[--n:3] [--gap:calc(var(--spacing)*24)]".
+   */
+  trackClass: string;
   prevClass: string;
   nextClass: string;
   arrowIconClass?: string;
@@ -19,11 +20,15 @@ interface CarouselProps {
   label: string;
 }
 
-// Rotates its items one step at a time and shows as many as fit the screen.
+// Keep in sync with the track's duration-600 class.
+const SLIDE_MS = 600;
+
+// Slides its items one card at a time and loops around endlessly. The items are
+// rendered three times so there is always a card coming in from either side;
+// after each slide the track quietly jumps back to the middle copy.
 export default function Carousel({
   children,
-  gridClass,
-  slots,
+  trackClass,
   prevClass,
   nextClass,
   arrowIconClass = "size-28",
@@ -34,18 +39,37 @@ export default function Carousel({
 }: CarouselProps) {
   const items = Children.toArray(children);
   const count = items.length;
-  const [start, setStart] = useState(0);
+  const [index, setIndex] = useState(count);
+  const [jump, setJump] = useState(false);
   const [paused, setPaused] = useState(false);
+  const moving = useRef(false);
+  const settle = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  const go = (step: number) => setStart((value) => (value + step + count) % count);
+  const slideTo = useCallback(
+    (target: number) => {
+      if (moving.current || count < 2) return;
+      moving.current = true;
+      setJump(false);
+      setIndex(target);
+      settle.current = setTimeout(() => {
+        moving.current = false;
+        setJump(true);
+        setIndex((count + (target % count)) % count + count);
+      }, SLIDE_MS);
+    },
+    [count],
+  );
+
+  useEffect(() => () => clearTimeout(settle.current), []);
 
   useEffect(() => {
     if (!autoplay || paused || count < 2) return;
-    const timer = setInterval(() => setStart((value) => (value + 1) % count), autoplay);
+    const timer = setInterval(() => slideTo(index + 1), autoplay);
     return () => clearInterval(timer);
-  }, [autoplay, paused, count]);
+  }, [autoplay, paused, count, index, slideTo]);
 
-  const ordered = items.map((_, position) => items[(start + position) % count]);
+  const active = index % count;
+  const looped = [...items, ...items, ...items];
 
   return (
     <div
@@ -56,32 +80,37 @@ export default function Carousel({
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <div className={gridClass}>
-        {ordered.map((item, position) => (
-          <div key={(start + position) % count} className={`animate-[fade_0.45s_ease] ${position < slots.length ? slots[position] : "hidden"}`}>
-            {item}
-          </div>
-        ))}
+      <div className={`overflow-x-clip ${trackClass}`}>
+        <div
+          style={{ "--i": index } as CSSProperties}
+          className={`carousel-track ${jump ? "" : "transition-transform duration-600 ease-[cubic-bezier(0.65,0,0.35,1)] motion-reduce:transition-none"}`}
+        >
+          {looped.map((item, position) => (
+            <div key={position} className="carousel-item" aria-hidden={position < count || position >= 2 * count || undefined}>
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
 
-      <button type="button" aria-label={uiLabel("previous")} onClick={() => go(-1)} className={prevClass}>
+      <button type="button" aria-label={uiLabel("previous")} onClick={() => slideTo(index - 1)} className={prevClass}>
         <Icon name="chevron-left" className={arrowIconClass} strokeWidth={2.6} />
       </button>
-      <button type="button" aria-label={uiLabel("next")} onClick={() => go(1)} className={nextClass}>
+      <button type="button" aria-label={uiLabel("next")} onClick={() => slideTo(index + 1)} className={nextClass}>
         <Icon name="chevron-right" className={arrowIconClass} strokeWidth={2.6} />
       </button>
 
       {dots && (
         <div className={`flex items-center justify-center gap-12 xl:gap-16 ${dotsClass}`}>
-          {items.map((_, index) => (
+          {items.map((_, dot) => (
             <button
-              key={index}
+              key={dot}
               type="button"
-              aria-label={uiLabel("goToSlide", { n: index + 1 })}
-              aria-current={index === start}
-              onClick={() => setStart(index)}
+              aria-label={uiLabel("goToSlide", { n: dot + 1 })}
+              aria-current={dot === active}
+              onClick={() => dot !== active && slideTo(count + dot)}
               className={`rounded-full transition-colors ${
-                index === start ? "size-14 bg-brand xl:size-18" : "size-12 bg-line-strong hover:bg-brand/50 xl:size-16"
+                dot === active ? "size-14 bg-brand xl:size-18" : "size-12 bg-line-strong hover:bg-brand/50 xl:size-16"
               }`}
             />
           ))}

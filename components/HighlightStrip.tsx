@@ -15,7 +15,7 @@ export default function HighlightStrip({ items }: { items: HighlightItem[] }) {
           key={item.title}
           className={`group flex items-center gap-18 lg:px-24 xl:gap-26 xl:px-30 ${index > 0 ? "lg:border-l lg:border-line" : ""}`}
         >
-          <span className="flex size-72 shrink-0 items-center justify-center rounded-full border border-line bg-white text-ink transition-[rotate,color,background-color,border-color] duration-500 group-hover:rotate-[360deg] group-hover:border-brand group-hover:bg-brand group-hover:text-white xl:size-90">
+          <span className="flex size-72 shrink-0 items-center justify-center rounded-full border border-line bg-white text-ink transition-[color,background-color,border-color] duration-500 group-hover:border-brand group-hover:bg-brand group-hover:text-white xl:size-90">
             <Icon name={item.icon} className="size-32 xl:size-44" strokeWidth={1.5} />
           </span>
           <span>

@@ -15,16 +15,16 @@ export default function BlogArticle({ post }: { post: BlogPost }) {
 
       <h2 className="sr-only">{title}</h2>
       <ul data-reveal="up" className="mt-24 flex flex-wrap items-center gap-x-28 gap-y-10 border-b border-line pb-20 font-body fs-15 text-slate xl:mt-45 xl:gap-x-52 xl:pb-28 xl:fs-24">
-        <li className="flex items-center gap-10 xl:gap-14">
-          <Icon name="user" className="size-20 text-brand xl:size-30" />
+        <li className="group flex items-center gap-10 xl:gap-14">
+          <Icon name="user" className="size-20 text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-12 group-hover:scale-125 xl:size-30" />
           {post.author}
         </li>
-        <li className="flex items-center gap-10 xl:gap-14">
-          <Icon name="calendar" className="size-20 text-brand xl:size-30" />
+        <li className="group flex items-center gap-10 xl:gap-14">
+          <Icon name="calendar" className="size-20 text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-12 group-hover:scale-125 xl:size-30" />
           {formatDate(post.date, "long")}
         </li>
-        <li className="flex items-center gap-10 xl:gap-14">
-          <Icon name="message" className="size-20 text-brand xl:size-30" />
+        <li className="group flex items-center gap-10 xl:gap-14">
+          <Icon name="message" className="size-20 text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-12 group-hover:scale-125 xl:size-30" />
           {String(post.comments).padStart(2, "0")} {data.blog.detail.commentsLabel}
         </li>
       </ul>
@@ -37,8 +37,8 @@ export default function BlogArticle({ post }: { post: BlogPost }) {
         ))}
       </div>
 
-      <blockquote data-reveal="left" className="mt-28 border-l-6 border-brand bg-cloud px-24 py-24 xl:mt-38 xl:border-l-9 xl:px-46 xl:pt-38 xl:pb-40">
-        <Icon name="quote" className="h-36 w-44 text-brand xl:h-58 xl:w-66" />
+      <blockquote data-reveal="left" className="group mt-28 border-l-6 border-brand bg-cloud px-24 py-24 xl:mt-38 xl:border-l-9 xl:px-46 xl:pt-38 xl:pb-40">
+        <Icon name="quote" className="h-36 w-44 origin-bottom-left text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:h-58 xl:w-66" />
         <p className="mt-10 font-heading fs-17 leading-28 font-extrabold italic text-graphite xl:mt-12 xl:fs-27 xl:leading-45 xl:whitespace-pre-line">
           “{post.quote.text}”
         </p>

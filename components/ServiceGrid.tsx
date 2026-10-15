@@ -40,7 +40,7 @@ export default function ServiceGrid() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span
-                  className={`flex size-64 items-center justify-center rounded-full text-white transition-[rotate] duration-700 group-hover:rotate-[360deg] xl:size-83 ${
+                  className={`flex size-64 items-center justify-center rounded-full text-white transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-83 ${
                     red ? "bg-brand" : "bg-ink"
                   }`}
                 >

@@ -30,7 +30,7 @@ export default function ServiceBenefits({ benefits }: { benefits: ServiceItem["b
             className="group flex items-start gap-18 rd-4 border-2 border-line bg-white transition-[translate,border-color,box-shadow] duration-300 hover:-translate-y-4 hover:border-brand hover:shadow-[0_16px_36px_rgba(10,40,50,0.08)] px-20 py-22 xl:h-178 xl:gap-32 xl:pr-16 xl:pl-34 xl:py-0 xl:pt-33"
           >
             <span
-              className={`flex size-56 shrink-0 items-center justify-center rounded-full font-heading fs-20 font-bold text-white transition-[rotate,scale] duration-500 group-hover:scale-110 group-hover:rotate-[360deg] xl:size-82 xl:fs-29 ${
+              className={`flex size-56 shrink-0 items-center justify-center rounded-full font-heading fs-20 font-bold text-white transition-[scale] duration-500 group-hover:scale-110 xl:size-82 xl:fs-29 ${
                 index === 0 || index === 3 ? "bg-brand" : "bg-ink"
               }`}
             >

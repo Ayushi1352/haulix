@@ -90,7 +90,7 @@ export default function Footer() {
             {contactItems.map(({ icon, lines, type }) => {
               return (
                 <li key={icon} className="group flex items-center gap-18 xl:gap-31">
-                  <span className="flex size-50 shrink-0 items-center justify-center rounded-full bg-brand transition-[rotate] duration-700 group-hover:rotate-[360deg] xl:size-62">
+                  <span className="flex size-50 shrink-0 items-center justify-center rounded-full bg-brand transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-62">
                     <Icon name={icon} className="size-22 xl:size-27" />
                   </span>
                   <span className="flex flex-col font-body fs-15 leading-24 text-white/90 xl:fs-19 xl:leading-29">

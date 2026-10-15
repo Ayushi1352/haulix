@@ -15,8 +15,8 @@ export default function Testimonials() {
       <div data-reveal="up" className="mx-auto mt-32 max-w-1900 [--delay:250ms] px-20 sm:px-40 md:px-88 xl:mt-38 xl:px-136">
         <Carousel
           label={testimonials.label}
-          gridClass="grid gap-24 md:grid-cols-2 xl:grid-cols-3 xl:gap-33"
-          slots={["", "hidden md:block", "hidden xl:block"]}
+          trackClass="[--n:1] md:[--n:2] xl:[--n:3] [--gap:calc(var(--spacing)*24)] xl:[--gap:calc(var(--spacing)*33)]"
+          autoplay={4000}
           prevClass={`${arrow} -left-4 md:-left-72 xl:-left-95`}
           nextClass={`${arrow} -right-4 md:-right-72 xl:-right-95`}
           arrowIconClass="size-24 xl:size-32"

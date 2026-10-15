@@ -142,6 +142,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
+/*
+  Sliding carousel (components/Carousel.tsx). The wrapper sets --n (cards in
+  view) and --gap; each step of --i moves the track one card plus one gap.
+*/
+.carousel-track {
+  display: flex;
+  gap: var(--gap);
+  transform: translateX(calc(var(--i) * (100% + var(--gap)) / var(--n) * -1));
+}
+.carousel-item {
+  flex: none;
+  width: calc((100% - (var(--n) - 1) * var(--gap)) / var(--n));
+}
+
 /* ---------- Animations ---------- */
 
 /* Entrance and ambient animations, used as motion-safe:animate-* utilities. */

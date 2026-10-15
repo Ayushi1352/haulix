@@ -44,8 +44,8 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="hidden bg-brand font-nav text-white md:block">
         <div className="flex h-44 items-center justify-between gap-16 px-24 fs-14 lg:px-40 xl:h-66 xl:pr-88 xl:pl-83 xl:fs-21 xl:tracking-[0.005em]">
-          <p className="flex min-w-0 items-center gap-10 xl:gap-17">
-            <Icon name="pin" className="size-18 shrink-0 xl:size-32" />
+          <p className="group flex min-w-0 items-center gap-10 xl:gap-17">
+            <Icon name="pin" className="size-18 shrink-0 transition-transform duration-300 group-hover:-translate-y-3 xl:size-32" />
             <span className="truncate">{companyAddress}</span>
           </p>
           <div className="flex shrink-0 items-center">
@@ -68,9 +68,9 @@ export default function Navbar() {
             <span className="hidden h-24 w-px bg-white/45 lg:block xl:h-30 xl:w-2" />
             <a
               href={`mailto:${company.email}`}
-              className="flex items-center gap-10 underline-offset-4 transition-colors hover:underline lg:pl-28 xl:gap-28 xl:pl-54"
+              className="group flex items-center gap-10 underline-offset-4 transition-colors hover:underline lg:pl-28 xl:gap-28 xl:pl-54"
             >
-              <Icon name="mail-line" className="size-18 xl:size-30" strokeWidth={1.6} />
+              <Icon name="mail-line" className="size-18 transition-[rotate,scale] duration-300 group-hover:-rotate-12 group-hover:scale-125 xl:size-30" strokeWidth={1.6} />
               {company.email}
             </a>
           </div>
@@ -173,12 +173,12 @@ export default function Navbar() {
               {button.label}
               <Icon name="arrow-right" className="size-18" strokeWidth={2} />
             </Link>
-            <a href={`mailto:${company.email}`} className="flex items-center gap-10 transition-colors hover:text-brand">
-              <Icon name="mail" className="size-18 text-brand" />
+            <a href={`mailto:${company.email}`} className="group flex items-center gap-10 transition-colors hover:text-brand">
+              <Icon name="mail" className="size-18 text-brand transition-[rotate,scale] duration-300 group-hover:-rotate-12 group-hover:scale-125" />
               {company.email}
             </a>
-            <p className="flex items-start gap-10">
-              <Icon name="pin" className="mt-1 size-18 shrink-0 text-brand" />
+            <p className="group flex items-start gap-10">
+              <Icon name="pin" className="mt-1 size-18 shrink-0 text-brand transition-transform duration-300 group-hover:-translate-y-3" />
               {companyAddress}
             </p>
           </div>
