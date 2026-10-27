@@ -15,7 +15,7 @@ export default function ContactUsPage() {
   return (
     <>
       <PageBanner title={title} />
-      <section className="section-y bg-white px-20 sm:px-40 lg:px-48 xl:px-95">
+      <section data-white-section className="py-64 sm:py-80 xl:py-120 bg-white px-20 sm:px-40 lg:px-48 xl:px-95 [[data-white-section]+&]:pt-0!">
         <PageIntro
           label={contact.label}
           title={contact.title}

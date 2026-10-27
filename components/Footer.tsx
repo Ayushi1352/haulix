@@ -8,7 +8,7 @@ const socials = socialLinks(footer.socials);
 // The first few services, linked to their detail pages.
 const serviceLinks = services.items
   .slice(0, footer.serviceLinks.count)
-  .map((item) => ({ label: item.navLabel, href: `/services/${item.slug}` }));
+  .map((item) => ({ label: item.navLabel, href: item.href }));
 const quickLinks = footer.quickLinks.map((link) => ({ label: link.name, href: link.href }));
 // Company contact details in the order site.json lists them; the address sits on one line.
 const contactItems = footer.contact.map(({ icon, field }) => {
@@ -20,14 +20,14 @@ const copyright = footer.copyright.replace("{year}", String(new Date().getFullYe
 function LinkColumn({ title, links }: { title: string; links: { label: string; href: string }[] }) {
   return (
     <div>
-      <h3 className="font-body fs-22 leading-30 font-semibold tracking-[-0.01em] text-white xl:fs-26 xl:leading-36">{title}</h3>
+      <h3 className="font-body text-[calc(22*var(--spacing))] leading-30 font-semibold tracking-[-0.01em] text-white xl:text-[calc(26*var(--spacing))] xl:leading-36">{title}</h3>
       <span className="mt-10 block h-3 w-44 bg-brand xl:mt-14 xl:h-4 xl:w-53" />
       <ul className="mt-22 flex flex-col gap-12 xl:mt-30 xl:gap-17">
         {links.map((link) => (
           <li key={link.label}>
             <Link
               href={link.href}
-              className="group flex items-center gap-14 font-body fs-16 leading-26 text-white/85 transition-colors hover:text-brand xl:gap-17 xl:fs-19 xl:leading-27"
+              className="group flex items-center gap-14 font-body text-[calc(16*var(--spacing))] leading-26 text-white/85 transition-colors hover:text-brand xl:gap-17 xl:text-[calc(19*var(--spacing))] xl:leading-27"
             >
               <Icon
                 name="chevron-right"
@@ -58,7 +58,7 @@ export default function Footer() {
               className="h-auto w-full"
             />
           </Link>
-          <p className="mt-22 max-w-440 font-body xl:max-w-none fs-16 leading-26 text-white/90 xl:mt-31 xl:fs-21 xl:leading-30 xl:whitespace-pre-line">
+          <p className="mt-22 max-w-440 font-body xl:max-w-none text-[calc(16*var(--spacing))] leading-26 text-white/90 xl:mt-31 xl:text-[calc(21*var(--spacing))] xl:leading-30 xl:whitespace-pre-line">
             {footer.description}
           </p>
           <ul className="mt-24 flex items-center gap-16 xl:mt-26 xl:gap-24">
@@ -82,7 +82,7 @@ export default function Footer() {
         <LinkColumn title={footer.serviceLinks.title} links={serviceLinks} />
 
         <div>
-          <h3 className="font-body fs-22 leading-30 font-semibold tracking-[-0.01em] text-white xl:fs-26 xl:leading-36">
+          <h3 className="font-body text-[calc(22*var(--spacing))] leading-30 font-semibold tracking-[-0.01em] text-white xl:text-[calc(26*var(--spacing))] xl:leading-36">
             {footer.contactTitle}
           </h3>
           <span className="mt-10 block h-3 w-44 bg-brand xl:mt-14 xl:h-4 xl:w-53" />
@@ -93,7 +93,7 @@ export default function Footer() {
                   <span className="flex size-50 shrink-0 items-center justify-center rounded-full bg-brand transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-62">
                     <Icon name={icon} className="size-22 xl:size-27" />
                   </span>
-                  <span className="flex flex-col font-body fs-15 leading-24 text-white/90 xl:fs-19 xl:leading-29">
+                  <span className="flex flex-col font-body text-[calc(15*var(--spacing))] leading-24 text-white/90 xl:text-[calc(19*var(--spacing))] xl:leading-29">
                     {lines.map((line) => {
                       const href = contactHref(type, line);
                       return href ? (
@@ -113,7 +113,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/15">
-        <p className="px-20 py-22 text-center font-body fs-14 text-white/85 xl:py-26 xl:fs-19">{copyright}</p>
+        <p className="px-20 py-22 text-center font-body text-[calc(14*var(--spacing))] text-white/85 xl:py-26 xl:text-[calc(19*var(--spacing))]">{copyright}</p>
       </div>
     </footer>
   );

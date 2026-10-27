@@ -19,6 +19,7 @@
       "fonts": {
         "heading": {
           "family": "Plus Jakarta Sans",
+          "fallback": "sans-serif",
           "weights": [
             400,
             500,
@@ -30,28 +31,34 @@
         },
         "body": {
           "family": "Poppins",
+          "fallback": "sans-serif",
           "weights": [
             300,
             400,
             500,
             600,
             700
-          ]
+          ],
+          "italic": false
         },
         "nav": {
           "family": "Roboto",
+          "fallback": "sans-serif",
           "weights": [
             400,
             500,
             700
-          ]
+          ],
+          "italic": false
         },
         "display": {
           "family": "Inter",
+          "fallback": "sans-serif",
           "weights": [
             800,
             900
-          ]
+          ],
+          "italic": false
         }
       }
     },
@@ -163,7 +170,6 @@
             ]
           },
           "service-detail": {
-            "expand": "items",
             "components": [
               {
                 "key": "PageBanner",
@@ -188,7 +194,6 @@
             ]
           },
           "blog-detail": {
-            "expand": "items",
             "components": [
               {
                 "key": "PageBanner",
@@ -313,6 +318,21 @@
               "name": "Haulix",
               "title": "Haulix | Logistics & Transportation",
               "description": "Reliable logistics solutions for a faster, safer and more connected tomorrow.",
+              "lang": "en",
+              "months": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+              ],
               "logo": "/images/logo.webp",
               "logoWhite": "/images/logo-white.webp",
               "logoSize": {
@@ -525,25 +545,25 @@
             "perPage": 8,
             "cards": [
               {
-                "service": "domestic-transportation",
+                "href": "/services/service-details",
                 "title": "Road\nTransportation",
                 "description": "Reliable and efficient road freight\nsolutions for safe and timely delivery\nacross regions.",
                 "image": "/images/service-road.webp"
               },
               {
-                "service": "international-shipping",
+                "href": "/services/service-details",
                 "title": "International\nShipping",
                 "description": "Global shipping solutions with complete\ndocumentation, customs support and\nreal-time tracking.",
                 "image": "/images/service-sea.webp"
               },
               {
-                "service": "freight-forwarding",
+                "href": "/services/service-details",
                 "title": "Freight\nForwarding",
                 "description": "End-to-end freight forwarding to move\nyour cargo across the globe with speed\nand reliability.",
                 "image": "/images/service-air.webp"
               },
               {
-                "service": "warehousing-storage",
+                "href": "/services/service-details",
                 "title": "Warehousing\n& Storage",
                 "description": "Modern and secure warehousing\nfacilities to keep your goods safe\nand well-managed.",
                 "image": "/images/service-warehouse.webp"
@@ -577,7 +597,7 @@
             },
             "items": [
               {
-                "slug": "freight-forwarding",
+                "href": "/services/service-details",
                 "title": "Freight Forwarding",
                 "navLabel": "Freight Forwarding",
                 "icon": "ship",
@@ -634,7 +654,7 @@
                 }
               },
               {
-                "slug": "domestic-transportation",
+                "href": "/services/service-details",
                 "title": "Domestic Transportation",
                 "navLabel": "Domestic Transportation",
                 "icon": "truck",
@@ -691,7 +711,7 @@
                 }
               },
               {
-                "slug": "international-shipping",
+                "href": "/services/service-details",
                 "title": "International Shipping",
                 "navLabel": "International Shipping",
                 "icon": "plane",
@@ -748,7 +768,7 @@
                 }
               },
               {
-                "slug": "warehousing-storage",
+                "href": "/services/service-details",
                 "title": "Warehousing & Storage",
                 "navLabel": "Warehousing",
                 "detailTitle": "Warehousing",
@@ -806,7 +826,7 @@
                 }
               },
               {
-                "slug": "supply-chain-solutions",
+                "href": "/services/service-details",
                 "title": "Supply Chain Solutions",
                 "navLabel": "Supply Chain Solutions",
                 "icon": "package",
@@ -863,7 +883,7 @@
                 }
               },
               {
-                "slug": "custom-clearance",
+                "href": "/services/service-details",
                 "title": "Custom Clearance",
                 "navLabel": "Custom Clearance",
                 "icon": "user-check",
@@ -920,7 +940,7 @@
                 }
               },
               {
-                "slug": "project-logistics",
+                "href": "/services/service-details",
                 "title": "Project Logistics",
                 "navLabel": "Project Logistics",
                 "icon": "truck-fast",
@@ -977,7 +997,7 @@
                 }
               },
               {
-                "slug": "last-mile-delivery",
+                "href": "/services/service-details",
                 "title": "Last Mile Delivery",
                 "navLabel": "Last Mile Delivery",
                 "icon": "package-fast",
@@ -1034,7 +1054,7 @@
                 }
               },
               {
-                "slug": "cold-chain-logistics",
+                "href": "/services/service-details",
                 "title": "Cold Chain Logistics",
                 "navLabel": "Cold Chain Logistics",
                 "icon": "box",
@@ -1310,7 +1330,7 @@
             "perPage": 8,
             "posts": [
               {
-                "slug": "growing-importance-of-air-freight",
+                "href": "/blogs/blog-details",
                 "title": "The Growing Importance\nof Air Freight in Global Trade",
                 "date": "2025-04-24",
                 "comments": 7,
@@ -1340,7 +1360,7 @@
                 ]
               },
               {
-                "slug": "efficient-logistics-drive-business-growth",
+                "href": "/blogs/blog-details",
                 "title": "How Efficient Logistics\nDrive Business Growth",
                 "date": "2025-04-21",
                 "comments": 3,
@@ -1370,7 +1390,7 @@
                 ]
               },
               {
-                "slug": "safe-and-reliable-transportation",
+                "href": "/blogs/blog-details",
                 "title": "Key Factors for Safe\nand Reliable Transportation",
                 "date": "2025-04-17",
                 "comments": 10,
@@ -1400,7 +1420,7 @@
                 ]
               },
               {
-                "slug": "sustainable-logistics-greener-tomorrow",
+                "href": "/blogs/blog-details",
                 "title": "Sustainable Logistics\nfor a Greener Tomorrow",
                 "date": "2025-04-15",
                 "comments": 6,
@@ -1430,7 +1450,7 @@
                 ]
               },
               {
-                "slug": "warehouse-automation-future",
+                "href": "/blogs/blog-details",
                 "title": "How Warehouse Automation\nIs Shaping the Future",
                 "date": "2025-04-10",
                 "comments": 5,
@@ -1460,7 +1480,7 @@
                 ]
               },
               {
-                "slug": "choosing-the-right-freight-mode",
+                "href": "/blogs/blog-details",
                 "title": "Road, Sea or Air: Choosing\nthe Right Freight Mode",
                 "date": "2025-04-04",
                 "comments": 8,
@@ -1490,7 +1510,7 @@
                 ]
               },
               {
-                "slug": "tips-for-faster-customs-clearance",
+                "href": "/blogs/blog-details",
                 "title": "Simple Tips for Faster\nCustoms Clearance",
                 "date": "2025-03-28",
                 "comments": 4,
@@ -1520,7 +1540,7 @@
                 ]
               },
               {
-                "slug": "why-real-time-tracking-matters",
+                "href": "/blogs/blog-details",
                 "title": "Why Real-Time Tracking\nMatters for Shippers",
                 "date": "2025-03-21",
                 "comments": 3,
@@ -1550,7 +1570,7 @@
                 ]
               },
               {
-                "slug": "planning-logistics-for-peak-season",
+                "href": "/blogs/blog-details",
                 "title": "Planning Your Logistics\nfor the Peak Season",
                 "date": "2025-03-14",
                 "comments": 5,

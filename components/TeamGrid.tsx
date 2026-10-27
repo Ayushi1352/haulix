@@ -8,17 +8,17 @@ const { team } = data;
 
 export default function TeamGrid() {
   return (
-    <section className="section-y bg-white px-20 sm:px-40 lg:px-64 xl:px-0">
+    <section data-white-section className="py-64 sm:py-80 xl:py-120 bg-white px-20 sm:px-40 lg:px-64 xl:px-0 [[data-white-section]+&]:pt-0!">
       <div className="text-center">
         <SectionLabel
           text={team.label}
           lineClass="h-3 w-44 bg-brand xl:h-4 xl:w-55"
-          className="gap-10 font-heading fs-14 font-bold tracking-[0.08em] text-ink xl:gap-12 xl:fs-15"
+          className="gap-10 font-heading text-[calc(14*var(--spacing))] font-bold tracking-[0.08em] text-ink xl:gap-12 xl:text-[calc(15*var(--spacing))]"
         />
-        <h2 data-reveal="up" className="mt-8 [--delay:100ms] font-heading fs-34 leading-42 font-extrabold tracking-[-0.025em] text-ink sm:fs-46 sm:leading-54 xl:mt-4 xl:fs-55 xl:leading-58">
+        <h2 data-reveal="up" data-reveal-delay="100" className="mt-8 font-heading text-[calc(34*var(--spacing))] leading-42 font-extrabold tracking-[-0.025em] text-ink sm:text-[calc(46*var(--spacing))] sm:leading-54 xl:mt-4 xl:text-[calc(55*var(--spacing))] xl:leading-58">
           <Highlight text={team.title} highlight={team.titleHighlight} highlightClass="text-brand" />
         </h2>
-        <p data-reveal="up" className="mx-auto mt-10 max-w-760 [--delay:200ms] font-heading fs-15 leading-24 font-medium text-steel xl:mt-8 xl:max-w-none xl:fs-17 xl:leading-23 xl:tracking-[0.01em] xl:whitespace-pre-line">
+        <p data-reveal="up" data-reveal-delay="200" className="mx-auto mt-10 max-w-760 font-heading text-[calc(15*var(--spacing))] leading-24 font-medium text-steel xl:mt-8 xl:max-w-none xl:text-[calc(17*var(--spacing))] xl:leading-23 xl:tracking-[0.01em] xl:whitespace-pre-line">
           {team.description}
         </p>
       </div>
@@ -27,7 +27,7 @@ export default function TeamGrid() {
         {team.members.map((member) => (
           <li
             key={member.name}
-            className="group overflow-hidden rd-4 bg-cloud pb-22 text-center shadow-[0_6px_18px_rgba(10,40,50,0.07)] transition-[translate,box-shadow] duration-300 hover:-translate-y-6 hover:shadow-[0_18px_40px_rgba(10,40,50,0.14)] xl:h-316 xl:pb-0"
+            className="group overflow-hidden rounded-[calc(4*var(--spacing))] bg-cloud pb-22 text-center shadow-[0_6px_18px_rgba(10,40,50,0.07)] transition-[translate,box-shadow] duration-300 hover:-translate-y-6 hover:shadow-[0_18px_40px_rgba(10,40,50,0.14)] xl:h-316 xl:pb-0"
           >
             <div className="relative h-220 overflow-hidden sm:h-200 xl:h-180">
               <Image
@@ -38,8 +38,8 @@ export default function TeamGrid() {
                 className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
               />
             </div>
-            <h3 className="mt-18 font-heading fs-18 font-extrabold text-ink xl:mt-15 xl:fs-19 xl:leading-24">{member.name}</h3>
-            <p className="mt-2 font-body fs-15 text-graphite xl:mt-1 xl:fs-15 xl:leading-22">{member.role}</p>
+            <h3 className="mt-18 font-heading text-[calc(18*var(--spacing))] font-extrabold text-ink xl:mt-15 xl:text-[calc(19*var(--spacing))] xl:leading-24">{member.name}</h3>
+            <p className="mt-2 font-body text-[calc(15*var(--spacing))] text-graphite xl:mt-1 xl:text-[calc(15*var(--spacing))] xl:leading-22">{member.role}</p>
             <span className="mx-auto mt-12 block h-3 w-43 bg-brand transition-[width] duration-300 group-hover:w-80 xl:mt-8" />
             <ul className="mt-14 flex items-center justify-center gap-12 xl:mt-15 xl:gap-13">
               {team.socials.map((social) => (

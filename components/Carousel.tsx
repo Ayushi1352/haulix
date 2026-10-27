@@ -83,10 +83,10 @@ export default function Carousel({
       <div className={`overflow-x-clip ${trackClass}`}>
         <div
           style={{ "--i": index } as CSSProperties}
-          className={`carousel-track ${jump ? "" : "transition-transform duration-600 ease-[cubic-bezier(0.65,0,0.35,1)] motion-reduce:transition-none"}`}
+          className={`flex gap-(--gap) [transform:translateX(calc(var(--i)*(100%_+_var(--gap))/var(--n)*-1))] ${jump ? "" : "transition-transform duration-600 ease-[cubic-bezier(0.65,0,0.35,1)] motion-reduce:transition-none"}`}
         >
           {looped.map((item, position) => (
-            <div key={position} className="carousel-item" aria-hidden={position < count || position >= 2 * count || undefined}>
+            <div key={position} className="w-[calc((100%_-_(var(--n)_-_1)*var(--gap))/var(--n))] flex-none" aria-hidden={position < count || position >= 2 * count || undefined}>
               {item}
             </div>
           ))}

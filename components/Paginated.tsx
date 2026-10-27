@@ -45,7 +45,7 @@ interface PaginationProps {
 
 function Pagination({ page, pageCount, onChange }: PaginationProps) {
   const button =
-    "flex size-42 items-center justify-center rounded-full border font-heading fs-16 font-bold transition-colors xl:size-54 xl:fs-19";
+    "flex size-42 items-center justify-center rounded-full border font-heading text-[calc(16*var(--spacing))] font-bold transition-colors xl:size-54 xl:text-[calc(19*var(--spacing))]";
   const idle = "border-line bg-white text-ink hover:border-brand hover:text-brand";
   const arrow = `${button} ${idle} disabled:pointer-events-none disabled:opacity-40`;
 

@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import siteData from "./site.json";
 
 // ── Root Schema Types ──
@@ -23,6 +22,8 @@ export type TestimonialItem = HaulixTestimonialData["items"][number];
 const sec = siteData.Haulix.sections;
 
 const site = {
+  // Colours and fonts; app/layout.tsx and scripts/fonts.mjs read them.
+  theme: siteData.Haulix.theme,
   site: sec.Header.variants.HaulixHeader1.site,
   company: sec.Topbar.variants.HaulixTopbar1,
   header: sec.Header.variants.HaulixHeader1,
@@ -45,28 +46,6 @@ const site = {
   Haulix: siteData.Haulix,
 };
 
-// ── Theme: colors and fonts from site.json ──
-const { theme } = siteData.Haulix;
-
-// --theme-* variables for <html>; globals.css maps them onto the Tailwind tokens.
-export const themeStyle = {
-  ...Object.fromEntries(Object.entries(theme.colors).map(([name, value]) => [`--theme-${name}`, value])),
-  ...Object.fromEntries(Object.entries(theme.fonts).map(([role, font]) => [`--theme-font-${role}`, `"${font.family}"`])),
-} as CSSProperties;
-
-// One Google Fonts stylesheet for every font in the theme.
-export const themeFontsHref = (() => {
-  const families = Object.values(theme.fonts).map((font: { family: string; weights: number[]; italic?: boolean }) => {
-    const name = font.family.trim().replace(/ /g, "+");
-    const weights = [...font.weights].sort((a, b) => a - b);
-    const axis = font.italic
-      ? `ital,wght@${[...weights.map((w) => `0,${w}`), ...weights.map((w) => `1,${w}`)].join(";")}`
-      : `wght@${weights.join(";")}`;
-    return `family=${name}:${axis}`;
-  });
-  return `https://fonts.googleapis.com/css2?${families.join("&")}&display=swap`;
-})();
-
 // ── Screen-reader labels from site.json; "{n}"-style slots are filled from `values`. ──
 export type LabelKey = keyof typeof siteData.Haulix.labels;
 export const label = (key: LabelKey, values: Record<string, string | number> = {}) =>
@@ -76,7 +55,8 @@ export const label = (key: LabelKey, values: Record<string, string | number> = {
 export const pageTitle = (title: string) => `${title} | ${site.site.name}`;
 
 // Post dates are stored once as "YYYY-MM-DD"; "short" gives "24 Apr 2025", "long" gives "April 24, 2025".
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// Month names come from site.json (site.months).
+const MONTHS = site.site.months;
 export const formatDate = (iso: string, style: "short" | "long" = "short") => {
   const [year, month, day] = iso.split("-").map(Number);
   const name = MONTHS[month - 1];

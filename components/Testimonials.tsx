@@ -10,9 +10,9 @@ const arrow =
 
 export default function Testimonials() {
   return (
-    <section className={"section-y bg-white"}>
+    <section data-white-section className="py-64 sm:py-80 xl:py-120 bg-white [[data-white-section]+&]:pt-0!">
       <TestimonialsHeading />
-      <div data-reveal="up" className="mx-auto mt-32 max-w-1900 [--delay:250ms] px-20 sm:px-40 md:px-88 xl:mt-38 xl:px-136">
+      <div data-reveal="up" data-reveal-delay="250" className="mx-auto mt-32 max-w-1900 px-20 sm:px-40 md:px-88 xl:mt-38 xl:px-136">
         <Carousel
           label={testimonials.label}
           trackClass="[--n:1] md:[--n:2] xl:[--n:3] [--gap:calc(var(--spacing)*24)] xl:[--gap:calc(var(--spacing)*33)]"

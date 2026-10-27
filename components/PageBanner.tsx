@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { introHidden, kenburnsStart } from "@/components/motion";
 import { label, site as data } from "@/data";
 
 export interface Crumb {
@@ -23,16 +24,19 @@ export default function PageBanner({ title, crumbs }: PageBannerProps) {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center motion-safe:animate-kenburns"
+        data-intro="kenburns"
+        className={`object-cover object-center ${kenburnsStart}`}
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-deep)_35%,transparent)_0%,color-mix(in_srgb,var(--color-deep)_12%,transparent)_45%,transparent_70%)]" />
       <div className="relative w-full px-20 pt-6 sm:px-40 lg:px-80 xl:px-156 xl:pt-30">
-        <h1 className="motion-safe:animate-intro-up font-heading fs-24 leading-30 font-bold tracking-[-0.02em] text-white sm:fs-52 sm:leading-62 lg:fs-68 lg:leading-80 xl:fs-94 xl:leading-108">
+        <h1 data-intro="up" className={`font-heading text-[calc(24*var(--spacing))] leading-30 font-bold tracking-[-0.02em] text-white sm:text-[calc(52*var(--spacing))] sm:leading-62 lg:text-[calc(68*var(--spacing))] lg:leading-80 xl:text-[calc(94*var(--spacing))] xl:leading-108 ${introHidden}`}>
           {title}
         </h1>
         <nav
           aria-label={label("breadcrumb")}
-          className="mt-8 flex flex-nowrap items-center motion-safe:animate-intro-up motion-safe:[animation-delay:200ms] gap-8 whitespace-nowrap font-heading fs-12 font-bold text-white sm:gap-12 sm:fs-18 xl:mt-10 xl:gap-22 xl:fs-23 xl:tracking-[0.06em]"
+          data-intro="up"
+          data-intro-delay="200"
+          className={`mt-8 flex flex-nowrap items-center gap-8 whitespace-nowrap font-heading text-[calc(12*var(--spacing))] font-bold text-white sm:gap-12 sm:text-[calc(18*var(--spacing))] xl:mt-10 xl:gap-22 xl:text-[calc(23*var(--spacing))] xl:tracking-[0.06em] ${introHidden}`}
         >
           <Link href="/" className="transition-colors hover:text-brand">
             {data.pageBanner.homeLabel}

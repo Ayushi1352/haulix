@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Icon from "@/components/Icon";
 import Paginated from "@/components/Paginated";
@@ -30,18 +30,30 @@ export default function GalleryGrid() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open, count]);
 
+  // The lightbox fades in when it opens, and every image pops in as it is shown.
+  const overlay = useRef<HTMLDivElement>(null);
+  const frame = useRef<HTMLDivElement>(null);
+  const isOpen = open !== null;
+  useEffect(() => {
+    if (isOpen) overlay.current?.animate([{ opacity: 0 }, {}], { duration: 300, easing: "ease-out" });
+  }, [isOpen]);
+  useEffect(() => {
+    if (open === null || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    frame.current?.animate([{ opacity: 0, transform: "scale(0.92)" }, {}], { duration: 350, easing: "cubic-bezier(0.22, 1, 0.36, 1)" });
+  }, [open]);
+
   return (
-    <section className="section-y bg-white px-20 sm:px-40 lg:px-64 xl:pr-93 xl:pl-82">
+    <section data-white-section className="py-64 sm:py-80 xl:py-120 bg-white px-20 sm:px-40 lg:px-64 xl:pr-93 xl:pl-82 [[data-white-section]+&]:pt-0!">
       <div className="text-center">
         <SectionLabel
           text={gallery.label}
           lineClass="h-2 w-44 bg-brand xl:h-3 xl:w-55"
-          className="font-heading fs-14 font-bold tracking-[0.08em] text-ink xl:fs-16"
+          className="font-heading text-[calc(14*var(--spacing))] font-bold tracking-[0.08em] text-ink xl:text-[calc(16*var(--spacing))]"
         />
-        <h2 data-reveal="up" className="mt-12 [--delay:100ms] font-heading fs-34 leading-42 font-extrabold tracking-[-0.025em] text-ink sm:fs-46 sm:leading-54 xl:mt-14 xl:fs-65 xl:leading-72">
+        <h2 data-reveal="up" data-reveal-delay="100" className="mt-12 font-heading text-[calc(34*var(--spacing))] leading-42 font-extrabold tracking-[-0.025em] text-ink sm:text-[calc(46*var(--spacing))] sm:leading-54 xl:mt-14 xl:text-[calc(65*var(--spacing))] xl:leading-72">
           <Highlight text={gallery.title} highlight={gallery.titleHighlight} highlightClass="text-brand" />
         </h2>
-        <p data-reveal="up" className="mx-auto mt-10 max-w-760 [--delay:200ms] font-heading fs-15 leading-25 font-medium text-steel xl:mt-12 xl:max-w-none xl:fs-20 xl:leading-29 xl:whitespace-pre-line">
+        <p data-reveal="up" data-reveal-delay="200" className="mx-auto mt-10 max-w-760 font-heading text-[calc(15*var(--spacing))] leading-25 font-medium text-steel xl:mt-12 xl:max-w-none xl:text-[calc(20*var(--spacing))] xl:leading-29 xl:whitespace-pre-line">
           {gallery.description}
         </p>
       </div>
@@ -53,7 +65,7 @@ export default function GalleryGrid() {
               type="button"
               onClick={() => setOpen(index)}
               aria-label={label("openImage", { name: image.label })}
-              className={`group relative block h-140 w-full overflow-hidden rd-4 sm:h-220 lg:h-200 ${rowHeights[Math.floor((index % gallery.perPage) / 4) % rowHeights.length]}`}
+              className={`group relative block h-140 w-full overflow-hidden rounded-[calc(4*var(--spacing))] sm:h-220 lg:h-200 ${rowHeights[Math.floor((index % gallery.perPage) / 4) % rowHeights.length]}`}
             >
               <Image
                 src={image.image}
@@ -73,10 +85,11 @@ export default function GalleryGrid() {
           role="dialog"
           aria-modal="true"
           aria-label={images[open].label}
+          ref={overlay}
           onClick={() => setOpen(null)}
-          className="fixed inset-0 z-[100] flex animate-[fade_0.3s_ease-out] items-center justify-center bg-[color-mix(in_srgb,var(--color-deep)_90%,transparent)] p-16 sm:p-48"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[color-mix(in_srgb,var(--color-deep)_90%,transparent)] p-16 sm:p-48"
         >
-          <div key={open} className="relative h-full max-h-[80vh] w-full max-w-1300 motion-safe:animate-pop" onClick={(event) => event.stopPropagation()}>
+          <div key={open} ref={frame} className="relative h-full max-h-[80vh] w-full max-w-1300" onClick={(event) => event.stopPropagation()}>
             <Image src={images[open].image} alt={images[open].label} fill sizes="90vw" className="object-contain" />
           </div>
           <button

@@ -109,14 +109,14 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
   };
 
   const base =
-    "w-full rd-3 border border-line bg-white pl-48 font-heading fs-15 font-medium text-ink outline-none transition-colors placeholder:text-steel focus:border-brand xl:pl-60 xl:fs-17";
+    "w-full rounded-[calc(3*var(--spacing))] border border-line bg-white pl-48 font-heading text-[calc(15*var(--spacing))] font-medium text-ink outline-none transition-colors placeholder:text-steel focus:border-brand xl:pl-60 xl:text-[calc(17*var(--spacing))]";
 
   return (
-    <div data-reveal="left" className="rd-6 border border-line bg-cloud px-20 py-28 sm:px-32 xl:px-36 xl:pt-30 xl:pb-38">
-      <h2 className="font-heading fs-28 leading-36 font-extrabold tracking-[-0.025em] text-ink xl:fs-41 xl:leading-50">
+    <div data-reveal="left" className="rounded-[calc(6*var(--spacing))] border border-line bg-cloud px-20 py-28 sm:px-32 xl:px-36 xl:pt-30 xl:pb-38">
+      <h2 className="font-heading text-[calc(28*var(--spacing))] leading-36 font-extrabold tracking-[-0.025em] text-ink xl:text-[calc(41*var(--spacing))] xl:leading-50">
         <Highlight text={form.title} highlight={form.titleHighlight} highlightClass="text-brand" />
       </h2>
-      <p className="mt-6 font-heading fs-15 leading-24 font-medium text-steel xl:mt-8 xl:fs-20 xl:leading-30 xl:whitespace-pre-line">
+      <p className="mt-6 font-heading text-[calc(15*var(--spacing))] leading-24 font-medium text-steel xl:mt-8 xl:text-[calc(20*var(--spacing))] xl:leading-30 xl:whitespace-pre-line">
         {form.description}
       </p>
 
@@ -152,7 +152,7 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
                     aria-label={label}
                     value={value}
                     onChange={(event) => update(field.name, event.target.value)}
-                    className={`${base} ${border} ${fieldHeight} pr-44 ${value ? "text-ink" : "text-steel"}`}
+                    className={`${base} ${border} ${fieldHeight} appearance-none pr-44 ${value ? "text-ink" : "text-steel"}`}
                   >
                     <option value="" disabled>
                       {label}
@@ -181,7 +181,7 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
                     onFocus={() => setFocused(field.name)}
                     onBlur={() => setFocused(null)}
                     onChange={(event) => update(field.name, event.target.value)}
-                    className={`${base} ${border} ${fieldHeight} pr-16 ${field.type === "date" ? "relative pr-48" : ""}`}
+                    className={`${base} ${border} ${fieldHeight} pr-16 ${field.type === "date" ? "relative pr-48 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-0" : ""}`}
                   />
                   {field.type === "date" && (
                     <Icon
@@ -200,7 +200,7 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
           <button
             type="submit"
             disabled={status === "sending"}
-            className={`group mt-4 inline-flex w-full items-center justify-center gap-16 rd-3 border border-brand bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] font-heading fs-16 font-bold tracking-[0.14em] text-white shadow-[0_8px_20px_color-mix(in_srgb,var(--color-brand)_25%,transparent)] transition-colors hover:bg-white hover:bg-none hover:text-brand disabled:cursor-wait disabled:opacity-80 disabled:hover:bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] disabled:hover:text-white xl:gap-26 xl:fs-19 ${
+            className={`group mt-4 inline-flex w-full items-center justify-center gap-16 rounded-[calc(3*var(--spacing))] border border-brand bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] font-heading text-[calc(16*var(--spacing))] font-bold tracking-[0.14em] text-white shadow-[0_8px_20px_color-mix(in_srgb,var(--color-brand)_25%,transparent)] transition-colors hover:bg-white hover:bg-none hover:text-brand disabled:cursor-wait disabled:opacity-80 disabled:hover:bg-[linear-gradient(90deg,var(--color-brand-hover)_0%,var(--color-brand)_100%)] disabled:hover:text-white xl:gap-26 xl:text-[calc(19*var(--spacing))] ${
               compact ? "h-56 xl:mt-0 xl:h-68" : "h-58 xl:mt-5 xl:h-64"
             }`}
           >
@@ -217,18 +217,18 @@ export default function EnquiryForm({ form, size = "contact" }: EnquiryFormProps
             )}
           </button>
           <div aria-live="polite" className="font-heading">
-            {status === "error" && <p className="mt-12 fs-14 font-semibold text-brand xl:fs-17">{error}</p>}
+            {status === "error" && <p className="mt-12 text-[calc(14*var(--spacing))] font-semibold text-brand xl:text-[calc(17*var(--spacing))]">{error}</p>}
             {status === "sent" && (
               <div
                 role="status"
-                className="mt-16 flex items-start gap-14 rd-6 border border-[#bfe3cd] bg-[#eef8f2] px-16 py-14 [animation:fade_0.3s_ease-out] xl:mt-20 xl:gap-18 xl:px-22 xl:py-18"
+                className="mt-16 flex items-start gap-14 rounded-[calc(6*var(--spacing))] border border-[#bfe3cd] bg-[#eef8f2] px-16 py-14 [animation:fade_0.3s_ease-out] xl:mt-20 xl:gap-18 xl:px-22 xl:py-18"
               >
                 <span className="flex size-32 shrink-0 items-center justify-center rounded-full bg-[#1d7a46] text-white xl:size-40">
                   <Icon name="check" className="size-18 xl:size-22" strokeWidth={2.6} />
                 </span>
                 <div className="min-w-0 flex-1">
-                  <p className="fs-16 font-bold text-[#145c34] xl:fs-19">{form.successTitle}</p>
-                  <p className="mt-2 fs-14 leading-22 font-medium text-[#2f5d43] xl:fs-16 xl:leading-24">{form.success}</p>
+                  <p className="text-[calc(16*var(--spacing))] font-bold text-[#145c34] xl:text-[calc(19*var(--spacing))]">{form.successTitle}</p>
+                  <p className="mt-2 text-[calc(14*var(--spacing))] leading-22 font-medium text-[#2f5d43] xl:text-[calc(16*var(--spacing))] xl:leading-24">{form.success}</p>
                 </div>
                 <button
                   type="button"

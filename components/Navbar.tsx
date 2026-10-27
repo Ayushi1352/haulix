@@ -43,7 +43,7 @@ export default function Navbar() {
     <header ref={headerRef} className="sticky top-0 z-50 md:-top-44 xl:-top-66">
       {/* Top bar */}
       <div className="hidden bg-brand font-nav text-white md:block">
-        <div className="flex h-44 items-center justify-between gap-16 px-24 fs-14 lg:px-40 xl:h-66 xl:pr-88 xl:pl-83 xl:fs-21 xl:tracking-[0.005em]">
+        <div className="flex h-44 items-center justify-between gap-16 px-24 text-[calc(14*var(--spacing))] lg:px-40 xl:h-66 xl:pr-88 xl:pl-83 xl:text-[calc(21*var(--spacing))] xl:tracking-[0.005em]">
           <p className="group flex min-w-0 items-center gap-10 xl:gap-17">
             <Icon name="pin" className="size-18 shrink-0 transition-transform duration-300 group-hover:-translate-y-3 xl:size-32" />
             <span className="truncate">{companyAddress}</span>
@@ -101,7 +101,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       aria-current={active ? "page" : undefined}
-                      className={`relative block font-nav fs-24 leading-34 font-medium transition-colors hover:text-brand ${
+                      className={`relative block font-nav text-[calc(24*var(--spacing))] leading-34 font-medium transition-colors hover:text-brand ${
                         active
                           ? "text-brand"
                           : "text-ink after:absolute after:inset-x-0 after:top-full after:mt-11 after:h-6 after:origin-left after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 hover:after:scale-x-100"
@@ -120,7 +120,7 @@ export default function Navbar() {
             <span className="hidden h-86 w-2 bg-line xl:mr-38 xl:block" />
             <Link
               href={button.href}
-              className="group hidden h-44 items-center justify-center gap-10 rounded-full border border-brand bg-brand px-22 font-nav fs-15 font-medium text-white transition-colors hover:bg-white hover:text-brand sm:inline-flex xl:mt-6 xl:h-82 xl:w-252 xl:gap-16 xl:px-0 xl:fs-25"
+              className="group hidden h-44 items-center justify-center gap-10 rounded-full border border-brand bg-brand px-22 font-nav text-[calc(15*var(--spacing))] font-medium text-white transition-colors hover:bg-white hover:text-brand sm:inline-flex xl:mt-6 xl:h-82 xl:w-252 xl:gap-16 xl:px-0 xl:text-[calc(25*var(--spacing))]"
             >
               {button.label}
               <Icon name="arrow-right" className="size-16 transition-transform group-hover:translate-x-4 xl:size-26" strokeWidth={2} />
@@ -153,7 +153,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
-                    className={`flex items-center justify-between py-14 font-nav fs-17 font-medium ${
+                    className={`flex items-center justify-between py-14 font-nav text-[calc(17*var(--spacing))] font-medium ${
                       active ? "text-brand" : "text-ink transition-colors hover:text-brand"
                     }`}
                   >
@@ -164,11 +164,11 @@ export default function Navbar() {
               );
             })}
           </ul>
-          <div className="flex flex-col gap-12 border-t border-line px-16 py-18 font-nav fs-15 text-ink sm:px-24 lg:px-40">
+          <div className="flex flex-col gap-12 border-t border-line px-16 py-18 font-nav text-[calc(15*var(--spacing))] text-ink sm:px-24 lg:px-40">
             <Link
               href={button.href}
               onClick={() => setOpen(false)}
-              className="inline-flex h-48 items-center justify-center gap-10 rounded-full border border-brand bg-brand fs-16 font-medium text-white transition-colors hover:bg-white hover:text-brand sm:hidden"
+              className="inline-flex h-48 items-center justify-center gap-10 rounded-full border border-brand bg-brand text-[calc(16*var(--spacing))] font-medium text-white transition-colors hover:bg-white hover:text-brand sm:hidden"
             >
               {button.label}
               <Icon name="arrow-right" className="size-18" strokeWidth={2} />

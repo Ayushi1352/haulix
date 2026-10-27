@@ -9,7 +9,7 @@ export default function ReviewGrid() {
   const { items } = testimonials;
 
   return (
-    <section className="section-y bg-white">
+    <section data-white-section className="py-64 sm:py-80 xl:py-120 bg-white [[data-white-section]+&]:pt-0!">
       <TestimonialsHeading />
       <Paginated perPage={testimonials.perPage} className="mx-auto mt-32 grid max-w-1640 gap-24 px-20 sm:px-40 md:grid-cols-2 xl:mt-39 xl:grid-cols-3 xl:gap-x-33 xl:gap-y-60 xl:px-0">
         {items.map((item, index) => (
