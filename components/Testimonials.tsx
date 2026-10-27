@@ -5,8 +5,9 @@ import TestimonialsHeading from "./TestimonialsHeading";
 
 const { testimonials } = data;
 
+// On phones the arrows sit on the dots row, one at each end, so they never cover the quote.
 const arrow =
-  "absolute top-1/2 z-10 hidden size-56 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand shadow-[0_6px_20px_rgba(10,40,50,0.14)] transition-colors hover:bg-brand hover:text-white md:flex xl:-mt-62 xl:size-82";
+  "absolute top-1/2 z-10 flex size-40 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand shadow-[0_6px_20px_rgba(10,40,50,0.14)] transition-colors hover:bg-brand hover:text-white max-md:top-auto max-md:bottom-7 max-md:translate-y-1/2 md:size-56 xl:-mt-62 xl:size-82";
 
 export default function Testimonials() {
   return (
@@ -17,9 +18,9 @@ export default function Testimonials() {
           label={testimonials.label}
           trackClass="[--n:1] md:[--n:2] xl:[--n:3] [--gap:calc(var(--spacing)*24)] xl:[--gap:calc(var(--spacing)*33)]"
           autoplay={4000}
-          prevClass={`${arrow} -left-4 md:-left-72 xl:-left-95`}
-          nextClass={`${arrow} -right-4 md:-right-72 xl:-right-95`}
-          arrowIconClass="size-24 xl:size-32"
+          prevClass={`${arrow} left-0 md:-left-72 xl:-left-95`}
+          nextClass={`${arrow} right-0 md:-right-72 xl:-right-95`}
+          arrowIconClass="size-20 md:size-24 xl:size-32"
           dots
           dotsClass="mt-28 xl:mt-37"
         >

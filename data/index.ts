@@ -74,6 +74,8 @@ const { company } = site;
 export const contactField = (field: string): { lines: string[]; type?: "tel" | "mailto" } => {
   if (field === "phone") return { lines: [company.phone], type: "tel" };
   if (field === "email" || field === "emails") return { lines: [company.email], type: "mailto" };
+  // "Mon - Sat : 08:00 AM - 07:00 PM" → days on one line, hours on the next.
+  if (field === "timing") return { lines: company.timing.split(/\s+:\s+/) };
   return { lines: company.address.split("\n") };
 };
 

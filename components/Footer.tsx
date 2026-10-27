@@ -46,9 +46,10 @@ function LinkColumn({ title, links }: { title: string; links: { label: string; h
 export default function Footer() {
   return (
     <footer className="bg-deep text-white">
-      <div data-reveal-stagger className="grid gap-40 px-20 pt-56 pb-44 sm:grid-cols-2 sm:gap-x-48 sm:px-40 lg:px-64 xl:grid-cols-[37.75rem_20.375rem_25.25rem_1fr] xl:gap-0 xl:pr-40 xl:pl-93 xl:pt-54 xl:pb-49">
+      <div data-reveal-stagger className="grid gap-40 px-16 pt-56 pb-44 sm:grid-cols-2 sm:gap-x-48 sm:px-24 lg:px-40 xl:grid-cols-[37.75rem_20.375rem_25.25rem_1fr] xl:gap-0 xl:pr-40 xl:pl-72 xl:pt-54 xl:pb-49">
         <div>
-          <Link href="/" aria-label={site.name} className="block w-260 xl:mt-8 xl:w-465">
+          {/* Same size and left edge as the header logo. */}
+          <Link href="/" aria-label={site.name} className="block w-176 sm:w-220 xl:mt-8 xl:w-428">
             <Image
               src={site.logoWhite}
               alt={site.name}

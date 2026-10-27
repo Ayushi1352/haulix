@@ -1794,6 +1794,11 @@
                 "icon": "pin",
                 "title": "Our Location",
                 "field": "address"
+              },
+              {
+                "icon": "clock",
+                "title": "Business Hours",
+                "field": "timing"
               }
             ],
             "image": "/images/contact-office.webp",

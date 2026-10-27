@@ -48,9 +48,9 @@ export default function ServiceSidebar({ active }: { active: ServiceItem }) {
             const { lines, type } = contactField(item.field);
             return (
               <li key={item.label} className="group flex items-start gap-18 xl:gap-28">
-                <span className="relative flex size-60 shrink-0 items-center justify-center rounded-full bg-brand transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-85">
+                <span className="relative flex size-48 shrink-0 items-center justify-center rounded-full bg-brand transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-64">
                   <PulseRing />
-                  <Icon name={item.icon} className="size-26 xl:size-38" />
+                  <Icon name={item.icon} className="size-22 xl:size-28" />
                 </span>
                 <div>
                   <h3 className="font-heading text-[calc(17*var(--spacing))] font-bold xl:text-[calc(25*var(--spacing))] xl:leading-34">{item.label}</h3>

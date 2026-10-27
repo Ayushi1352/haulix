@@ -2,16 +2,18 @@ import Image from "next/image";
 import Icon from "@/components/Icon";
 import { companyMap, contactField, contactHref, site as data } from "@/data";
 
-const { contact, company } = data;
+const { contact } = data;
+// Opening hours break after the days, as on the Business Hours card.
+const timing = contactField("timing").lines.join("\n");
 
 // Right column: four info cards, the office photo and the location map.
 export default function ContactDetails() {
   return (
     <div className="flex min-w-0 flex-1 flex-col gap-20 xl:gap-22">
-      <ul data-reveal-stagger className="grid grid-cols-2 gap-8 md:grid-cols-3 xl:gap-7 [&>li:last-child]:col-span-2 md:[&>li:last-child]:col-span-1">
+      <ul data-reveal-stagger className="grid grid-cols-2 gap-8 md:grid-cols-4 xl:gap-7 [&>li:last-child:nth-child(odd)]:col-span-2 md:[&>li:last-child:nth-child(odd)]:col-span-1">
         {contact.infoCards.map((card) => {
           const { lines, type } = contactField(card.field);
-          const note = card.showTiming ? company.timing : card.note;
+          const note = card.showTiming ? timing : card.note;
           const body = (
             <>
               <span className="mx-auto flex size-48 items-center justify-center rounded-full bg-brand text-white transition-[rotate,scale] duration-300 group-hover:-rotate-6 group-hover:scale-110 xl:size-57">
@@ -26,13 +28,13 @@ export default function ContactDetails() {
                 ))}
               </span>
               {note && (
-                <span className="mt-4 block font-body text-[calc(12*var(--spacing))] text-muted xl:mt-6 xl:text-[calc(13*var(--spacing))]">{note}</span>
+                <span className="mt-4 block font-body whitespace-pre-line text-[calc(12*var(--spacing))] text-muted xl:mt-6 xl:text-[calc(13*var(--spacing))]">{note}</span>
               )}
             </>
           );
           const href = contactHref(type, lines[0]);
           const box =
-            "block h-full rounded-[calc(4*var(--spacing))] border border-line bg-white px-10 py-18 text-center shadow-[0_4px_14px_rgba(10,40,50,0.04)] xl:h-202 xl:px-8 xl:pt-22 xl:pb-0";
+            "block h-full rounded-[calc(4*var(--spacing))] border border-line bg-white px-10 py-18 text-center shadow-[0_4px_14px_rgba(10,40,50,0.04)] xl:min-h-202 xl:px-8 xl:pt-22 xl:pb-18";
           return (
             <li key={card.title}>
               {href ? (

@@ -59,7 +59,7 @@ export default function Services() {
               <h3 className="mt-10 font-heading text-[calc(28*var(--spacing))] leading-30 font-extrabold whitespace-pre-line xl:mt-14 xl:text-[calc(38*var(--spacing))] xl:leading-35">
                 {card.title}
               </h3>
-              <p className="mt-10 font-body text-[calc(15*var(--spacing))] leading-23 text-white/90 xl:mt-14 xl:text-[calc(19*var(--spacing))] xl:leading-26.5 xl:whitespace-pre-line">
+              <p className="mt-10 min-h-[3lh] font-body text-[calc(15*var(--spacing))] leading-23 text-white/90 xl:mt-14 xl:text-[calc(19*var(--spacing))] xl:leading-26.5 xl:whitespace-pre-line">
                 {card.description}
               </p>
               <span className="mt-16 inline-flex items-center gap-16 font-heading text-[calc(16*var(--spacing))] font-bold transition-colors group-hover:text-brand xl:mt-17 xl:text-[calc(20*var(--spacing))]">
