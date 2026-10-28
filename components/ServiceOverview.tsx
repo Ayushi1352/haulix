@@ -10,7 +10,7 @@ export default function ServiceOverview({ service }: { service: ServiceItem }) {
 
   return (
     <div>
-      <div data-reveal="zoom" className="relative h-220 overflow-hidden rounded-[calc(4*var(--spacing))] sm:h-320 xl:-mt-11 xl:h-410">
+      <div data-reveal="zoom" className="relative h-220 overflow-hidden rounded-[calc(4*var(--spacing))] sm:h-320 xl:h-410">
         <Image src={service.image} alt={title} fill priority sizes="(min-width: 1024px) 64vw, 100vw" className="object-cover" />
       </div>
 

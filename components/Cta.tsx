@@ -20,7 +20,7 @@ export default function Cta() {
           lineClass="h-2 w-44 bg-brand xl:h-3 xl:w-65"
           className="font-body text-[calc(14*var(--spacing))] tracking-[0.2em] text-white xl:text-[calc(19*var(--spacing))]"
         />
-        <h2 data-reveal="up" data-reveal-delay="100" className="mt-18 font-heading text-[calc(36*var(--spacing))] leading-40 font-extrabold tracking-[-0.03em] text-white sm:text-[calc(56*var(--spacing))] sm:leading-58 xl:mt-22 xl:text-[calc(93*var(--spacing))] xl:leading-82">
+        <h2 data-reveal="up" data-reveal-delay="100" className="mt-18 font-heading text-[calc(36*var(--spacing))] leading-44 font-extrabold tracking-[-0.03em] text-white sm:text-[calc(56*var(--spacing))] sm:leading-66 xl:mt-22 xl:text-[calc(93*var(--spacing))] xl:leading-106">
           <Highlight text={cta.title} highlight={cta.titleHighlight} highlightClass="text-brand" />
         </h2>
         <p data-reveal="up" data-reveal-delay="200" className="mx-auto mt-16 max-w-720 font-body text-[calc(16*var(--spacing))] leading-26 text-white xl:mt-32 xl:max-w-none xl:text-[calc(24*var(--spacing))] xl:leading-35 xl:whitespace-pre-line">

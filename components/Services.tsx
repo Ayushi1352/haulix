@@ -62,10 +62,10 @@ export default function Services() {
               <p className="mt-10 min-h-[3lh] font-body text-[calc(15*var(--spacing))] leading-23 text-white/90 xl:mt-14 xl:text-[calc(19*var(--spacing))] xl:leading-26.5 xl:whitespace-pre-line">
                 {card.description}
               </p>
-              <span className="mt-16 inline-flex items-center gap-16 font-heading text-[calc(16*var(--spacing))] font-bold transition-colors group-hover:text-brand xl:mt-17 xl:text-[calc(20*var(--spacing))]">
+              <span className="mt-16 inline-flex items-center gap-16 font-heading text-[calc(16*var(--spacing))] font-bold transition-colors group-hover:text-[oklch(from_var(--color-brand)_calc(l_+_0.3)_c_h)] xl:mt-17 xl:text-[calc(20*var(--spacing))]">
                 {services.readMore}
                 <svg viewBox="0 0 56 14" aria-hidden="true" className="h-12 w-46 transition-transform group-hover:translate-x-4 xl:h-14 xl:w-54">
-                  <path d="M1 7h52M46 1l7 6-7 6" className="stroke-brand" strokeWidth="2.4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M1 7h52M46 1l7 6-7 6" className="stroke-current" strokeWidth="2.4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
             </div>
