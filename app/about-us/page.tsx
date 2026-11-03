@@ -1,25 +1,28 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import About from "@/components/About";
-import Stats from "@/components/Stats";
-import WhyChoose from "@/components/WhyChoose";
-import Cta from "@/components/Cta";
-import Testimonials from "@/components/Testimonials";
-import { site as data, pageTitle } from "@/data";
+import rawData from "@/data/templates.json";
+import type { LogisticsTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { AboutUs } from "@/components/sections/AboutUs";
+import { Stats } from "@/components/sections/Stats";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { Cta } from "@/components/sections/Cta";
+import { Testimonials } from "@/components/sections/Testimonials";
 
-const { title } = data.pages.aboutUs;
+const templateData: LogisticsTemplateData = rawData;
+const sectionData = templateData.categories.Logistics.sections;
+const commonData = templateData.common;
 
-export const metadata: Metadata = { title: pageTitle(title) };
+export const metadata: Metadata = { ...commonData.aboutBreadcrumb?.seo };
 
 export default function AboutUsPage() {
   return (
-    <>
-      <PageBanner title={title} />
-      <About detailed />
-      <Stats />
-      <WhyChoose />
-      <Cta />
-      <Testimonials />
-    </>
+    <main className="flex-1">
+      <Breadcrumb data={commonData.aboutBreadcrumb} ui={commonData.globalUI} />
+      <AboutUs data={sectionData.AboutUs?.variants?.LogisticsAboutUs1} company={commonData.company} detailed />
+      <Stats data={sectionData.Stats?.variants?.LogisticsStats1} />
+      <WhyChooseUs data={sectionData.WhyChooseUs?.variants?.LogisticsWhyChooseUs1} />
+      <Cta data={sectionData.Cta?.variants?.LogisticsCta1} />
+      <Testimonials data={sectionData.Testimonials?.variants?.LogisticsTestimonials1} ui={commonData.globalUI} />
+    </main>
   );
 }

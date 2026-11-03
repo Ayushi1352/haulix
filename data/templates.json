@@ -1,0 +1,2031 @@
+{
+  "common": {
+    "theme": {
+      "fonts": {
+        "primary": "var(--font-plus-jakarta-sans), sans-serif",
+        "heading": "var(--font-plus-jakarta-sans), sans-serif",
+        "body": "var(--font-poppins), sans-serif",
+        "nav": "var(--font-roboto), sans-serif",
+        "display": "var(--font-inter), sans-serif"
+      }
+    },
+    "metadata": {
+      "title": "Haulix | Logistics & Transportation",
+      "siteName": "Haulix",
+      "description": "Reliable logistics solutions for a faster, safer and more connected tomorrow.",
+      "icon": "/favicon.ico",
+      "lang": "en"
+    },
+    "company": {
+      "name": "Haulix",
+      "logo": "/images/logo.webp",
+      "logoWhite": "/images/logo-white.webp",
+      "logoWidth": 1972,
+      "logoHeight": 404,
+      "phone": "+1 00000000",
+      "email": "info@xyz.com",
+      "address": "123 Main Street,\nNew York, NY 10001, USA",
+      "timing": "Mon - Sat : 08:00 AM - 07:00 PM",
+      "socialLinks": [
+        {
+          "id": "facebook",
+          "label": "Facebook",
+          "icon": "FaFacebookF",
+          "url": "https://www.facebook.com/"
+        },
+        {
+          "id": "instagram",
+          "label": "Instagram",
+          "icon": "FaInstagram",
+          "url": "https://www.instagram.com/"
+        },
+        {
+          "id": "twitter",
+          "label": "Twitter",
+          "icon": "FaTwitter",
+          "url": "https://x.com/"
+        },
+        {
+          "id": "linkedin",
+          "label": "LinkedIn",
+          "icon": "FaLinkedinIn",
+          "url": "https://www.linkedin.com/"
+        },
+        {
+          "id": "pinterest",
+          "label": "Pinterest",
+          "icon": "FaPinterestP",
+          "url": "https://www.pinterest.com/"
+        },
+        {
+          "id": "youtube",
+          "label": "YouTube",
+          "icon": "FaYoutube",
+          "url": "https://www.youtube.com/"
+        }
+      ],
+      "mapEmbedUrl": "https://maps.google.com/maps?q={query}&z=15&output=embed",
+      "mapOpenUrl": "https://www.google.com/maps/search/?api=1&query={query}"
+    },
+    "globalUI": {
+      "mainNav": "Main",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "breadcrumb": "Breadcrumb",
+      "previous": "Previous",
+      "next": "Next",
+      "goToSlide": "Go to slide {n}",
+      "pagination": "Pagination",
+      "previousPage": "Previous page",
+      "nextPage": "Next page",
+      "page": "Page {n}",
+      "openImage": "Open image: {name}",
+      "close": "Close",
+      "previousImage": "Previous image",
+      "nextImage": "Next image",
+      "closeMessage": "Close message",
+      "socialProfile": "{name} on {network}",
+      "breadcrumbImage": "/images/page-banner.webp",
+      "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+    },
+    "formOptions": {
+      "cities": [
+        "Mumbai",
+        "Delhi",
+        "Chennai",
+        "Kolkata",
+        "Toronto",
+        "Vancouver",
+        "London",
+        "Dubai",
+        "Singapore",
+        "Shanghai",
+        "Rotterdam",
+        "New York"
+      ],
+      "shipmentTypes": [
+        "Full Container Load (FCL)",
+        "Less than Container Load (LCL)",
+        "Full Truck Load (FTL)",
+        "Part Truck Load (PTL)",
+        "Air Cargo",
+        "Express Parcel"
+      ],
+      "requiredError": "Please fill in all required fields.",
+      "emailError": "Please enter a valid email address.",
+      "phoneError": "Please enter a valid phone number.",
+      "sending": "SENDING...",
+      "requiredMark": " *"
+    },
+    "aboutBreadcrumb": {
+      "title": "About Us",
+      "seo": {
+        "title": "About Us",
+        "description": "At Haulix, we deliver reliable and efficient logistics and transportation solutions that help businesses move forward. With a strong global network, modern infrastructure, and a customer-first approach, we ensure your cargo reaches its destination safely, on time, every time."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "about-us",
+          "label": "About Us",
+          "url": ""
+        }
+      ]
+    },
+    "servicesBreadcrumb": {
+      "title": "Services",
+      "seo": {
+        "title": "Services",
+        "description": "From local distribution to global shipping, Haulix delivers reliable, efficient and cost-effective logistics solutions tailored to your business needs."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "url": ""
+        }
+      ]
+    },
+    "serviceDetailBreadcrumb": {
+      "title": "Services Detail",
+      "seo": {
+        "title": "Services Detail",
+        "description": "At Haulix, we manage every step of your freight forwarding journey, from booking cargo space and preparing documentation to coordinating carriers across road, sea and air. Our global partner network gives your shipments dependable capacity and competitive rates on the routes that matter to your business."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "url": "/services"
+        },
+        {
+          "id": "services-detail",
+          "label": "Services Detail",
+          "url": ""
+        }
+      ]
+    },
+    "blogsBreadcrumb": {
+      "title": "Blogs",
+      "seo": {
+        "title": "Blogs",
+        "description": "Expert insights, market analysis, and shipping strategies to navigate global trade."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "blogs",
+          "label": "Blogs",
+          "url": ""
+        }
+      ]
+    },
+    "blogDetailBreadcrumb": {
+      "title": "Blogs Details",
+      "seo": {
+        "title": "Blogs Details",
+        "description": "Discover how air freight is helping businesses move faster and expand globally in today’s competitive market."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "blogs",
+          "label": "Blogs",
+          "url": "/blogs"
+        },
+        {
+          "id": "blogs-details",
+          "label": "Blogs Details",
+          "url": ""
+        }
+      ]
+    },
+    "teamBreadcrumb": {
+      "title": "Our Team",
+      "seo": {
+        "title": "Our Team",
+        "description": "Our experienced team brings together industry knowledge, operational expertise and a shared commitment to move your business forward."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "our-team",
+          "label": "Our Team",
+          "url": ""
+        }
+      ]
+    },
+    "testimonialsBreadcrumb": {
+      "title": "Testimonials",
+      "seo": {
+        "title": "Testimonials",
+        "description": "Trusted by businesses across industries, our clients appreciate our commitment to reliable, efficient and cost-effective logistics solutions."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimonials",
+          "url": ""
+        }
+      ]
+    },
+    "galleryBreadcrumb": {
+      "title": "Gallery",
+      "seo": {
+        "title": "Gallery",
+        "description": "Explore our gallery to see our logistics operations, infrastructure, fleet, and team in action across different locations."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "gallery",
+          "label": "Gallery",
+          "url": ""
+        }
+      ]
+    },
+    "quoteBreadcrumb": {
+      "title": "Get a Quote",
+      "seo": {
+        "title": "Get a Quote",
+        "description": "Share your logistics requirements with us and our team will provide you with a customized and competitive quote."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "get-a-quote",
+          "label": "Get a Quote",
+          "url": ""
+        }
+      ]
+    },
+    "contactBreadcrumb": {
+      "title": "Contact Us",
+      "seo": {
+        "title": "Contact Us",
+        "description": "We’re here to answer your questions and provide the best logistics solutions for your business. Reach out to us through the form or our contact details."
+      },
+      "paths": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "contact-us",
+          "label": "Contact Us",
+          "url": ""
+        }
+      ]
+    },
+    "notFound": {
+      "seo": {
+        "title": "Page Not Found",
+        "description": "The page you are looking for doesn't exist or has been moved."
+      },
+      "code": "404",
+      "title": "Page Not Found",
+      "description": "Sorry, the page you are looking for doesn't exist or has been moved.\nLet's get your shipment back on track.",
+      "buttonText": "Back to Home",
+      "buttonUrl": "/"
+    },
+    "Footer": {
+      "description": "Your trusted logistics partner, delivering\nreliable, efficient and cost-effective\ntransportation solutions across domestic\nand international routes.",
+      "socials": [
+        "linkedin",
+        "facebook",
+        "instagram",
+        "youtube"
+      ],
+      "quickLinksTitle": "Quick Links",
+      "quickLinks": [
+        {
+          "id": "home",
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "id": "about-us",
+          "label": "About Us",
+          "url": "/about-us"
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "url": "/services"
+        },
+        {
+          "id": "our-team",
+          "label": "Our Team",
+          "url": "/our-team"
+        },
+        {
+          "id": "gallery",
+          "label": "Gallery",
+          "url": "/gallery"
+        },
+        {
+          "id": "blog",
+          "label": "Blog",
+          "url": "/blogs"
+        },
+        {
+          "id": "contact-us",
+          "label": "Contact Us",
+          "url": "/contact-us"
+        }
+      ],
+      "servicesTitle": "Our Services",
+      "servicesCount": 6,
+      "contactTitle": "Contact Information",
+      "contact": [
+        {
+          "icon": "FaMapMarkerAlt",
+          "field": "address"
+        },
+        {
+          "icon": "FaPhoneAlt",
+          "field": "phone"
+        },
+        {
+          "icon": "FaEnvelope",
+          "field": "email"
+        }
+      ],
+      "copyrightText": "© {year} All Rights Reserved. Powered by Lestow."
+    }
+  },
+  "categories": {
+    "Logistics": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "LogisticsHeader1": {
+              "topbarSocials": [
+                "facebook",
+                "twitter",
+                "linkedin",
+                "instagram",
+                "pinterest"
+              ],
+              "nav": [
+                {
+                  "id": "home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "about-us",
+                  "label": "About Us",
+                  "url": "/about-us"
+                },
+                {
+                  "id": "services",
+                  "label": "Services",
+                  "url": "/services"
+                },
+                {
+                  "id": "our-team",
+                  "label": "Our Team",
+                  "url": "/our-team"
+                },
+                {
+                  "id": "testimonials",
+                  "label": "Testimonials",
+                  "url": "/testimonials"
+                },
+                {
+                  "id": "blogs",
+                  "label": "Blogs",
+                  "url": "/blogs"
+                },
+                {
+                  "id": "contact-us",
+                  "label": "Contact Us",
+                  "url": "/contact-us"
+                }
+              ],
+              "buttonText": "Get a Quote",
+              "buttonUrl": "/get-a-quote"
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "LogisticsHero1": {
+              "label": "LOGISTICS & TRANSPORTATION",
+              "title": "Your Cargo\nOur Commitment",
+              "titleHighlight": "Commitment",
+              "description": "Reliable logistics solutions for a faster, safer and\nmore connected tomorrow.",
+              "image": "/images/hero.webp",
+              "features": [
+                {
+                  "icon": "TbTruckDelivery",
+                  "title": "Fast & Reliable Delivery",
+                  "description": "On-time movement for\nyour business growth."
+                },
+                {
+                  "icon": "LuShieldCheck",
+                  "title": "Safe & Secure Handling",
+                  "description": "Your cargo is always\nin trusted hands."
+                },
+                {
+                  "icon": "LuGlobe",
+                  "title": "Global Logistics Network",
+                  "description": "Connecting your business\nto new opportunities."
+                }
+              ],
+              "buttonText": "Get a Quote",
+              "buttonUrl": "/get-a-quote"
+            }
+          }
+        },
+        "AboutUs": {
+          "variants": {
+            "LogisticsAboutUs1": {
+              "label": "ABOUT US",
+              "title": "Moving Businesses\nForward Worldwide",
+              "titleHighlight": "Forward Worldwide",
+              "paragraphs": [
+                "At Haulix, we deliver reliable and efficient logistics and transportation solutions that help businesses move forward. With a strong global network, modern infrastructure, and a customer-first approach, we ensure your cargo reaches its destination safely, on time, every time.",
+                "At Haulix, we deliver reliable and efficient logistics and transportation solutions that help businesses move forward. With a strong global network, modern infrastructure, and a customer-first approach, we ensure your cargo reaches its destination safely, on time, every time.",
+                "At Haulix, we deliver reliable and efficient logistics and transportation solutions that help businesses move forward. With a strong global network, modern infrastructure, and a customer-first approach, we ensure your cargo reaches its destination safely, on time, every time.",
+                "At Haulix, we deliver reliable and efficient logistics and transportation solutions that help businesses move forward. With a strong global network,"
+              ],
+              "images": {
+                "main": "/images/about-port-truck.webp",
+                "secondary": "/images/about-warehouse-worker.webp",
+                "mainAlt": "Haulix truck at the port with a cargo plane overhead",
+                "secondaryAlt": "Haulix team member in the warehouse"
+              },
+              "experience": {
+                "value": "10+",
+                "label": "Years of Trusted\nLogistics Service",
+                "icon": "TbTruckDelivery"
+              },
+              "features": [
+                {
+                  "title": "Customer Focus",
+                  "description": "Your success is\nour priority.",
+                  "icon": "LuUsers"
+                },
+                {
+                  "title": "Reliable Service",
+                  "description": "Safe, secure and\non-time delivery.",
+                  "icon": "LuShieldCheck"
+                },
+                {
+                  "title": "Global Reach",
+                  "description": "Connecting\nbusinesses worldwide.",
+                  "icon": "LuGlobe"
+                }
+              ],
+              "help": {
+                "label": "Need Any Help?",
+                "icon": "LuHeadset"
+              },
+              "buttonText": "Read More",
+              "buttonUrl": "/about-us"
+            }
+          }
+        },
+        "Stats": {
+          "variants": {
+            "LogisticsStats1": {
+              "background": "/images/stats-bg.webp",
+              "items": [
+                {
+                  "icon": "LuPackage",
+                  "value": "500+",
+                  "label": "Projects Delivered"
+                },
+                {
+                  "icon": "LuUsers",
+                  "value": "250+",
+                  "label": "Happy Clients"
+                },
+                {
+                  "icon": "TbTruckDelivery",
+                  "value": "50+",
+                  "label": "Fleet Vehicles"
+                },
+                {
+                  "icon": "LuGlobe",
+                  "value": "15+",
+                  "label": "Countries Served"
+                }
+              ]
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "LogisticsServices1": {
+              "label": "OUR SERVICES",
+              "title": "Comprehensive Logistics Solutions",
+              "titleHighlight": "Logistics Solutions",
+              "description": "From road to air, sea to warehousing, we provide end-to-end logistics solutions tailored to your business needs,\nensuring safety, speed and reliability at every step.",
+              "readMore": "Read More",
+              "perPage": 8,
+              "pageDescription": "From local distribution to global shipping, Haulix delivers reliable, efficient and\ncost-effective logistics solutions tailored to your business needs.",
+              "cards": [
+                {
+                  "title": "Road\nTransportation",
+                  "description": "Reliable and efficient road freight\nsolutions for safe and timely delivery\nacross regions.",
+                  "image": "/images/service-road.webp",
+                  "url": "/services/service-details"
+                },
+                {
+                  "title": "International\nShipping",
+                  "description": "Global shipping solutions with\ncomplete documentation, customs\nsupport and real-time tracking.",
+                  "image": "/images/service-sea.webp",
+                  "url": "/services/service-details"
+                },
+                {
+                  "title": "Freight\nForwarding",
+                  "description": "End-to-end freight forwarding to move\nyour cargo across the globe with speed\nand reliability.",
+                  "image": "/images/service-air.webp",
+                  "url": "/services/service-details"
+                },
+                {
+                  "title": "Warehousing\n& Storage",
+                  "description": "Modern and secure warehousing\nfacilities to keep your goods safe\nand well-managed.",
+                  "image": "/images/service-warehouse.webp",
+                  "url": "/services/service-details"
+                }
+              ],
+              "items": [
+                {
+                  "id": "freight-forwarding",
+                  "url": "/services/service-details",
+                  "title": "Freight Forwarding",
+                  "navLabel": "Freight Forwarding",
+                  "icon": "LuShip",
+                  "excerpt": "End-to-end freight forwarding\nsolutions to move your cargo\nacross the globe with speed\nand reliability.",
+                  "image": "/images/about-port-truck.webp",
+                  "paragraphs": [
+                    "At Haulix, we manage every step of your freight forwarding journey, from booking cargo space and preparing documentation to coordinating carriers across road, sea and air. Our global partner network gives your shipments dependable capacity and competitive rates on the routes that matter to your business.",
+                    "Whether you ship a single pallet or full container loads, our forwarding specialists plan the fastest and most cost-effective route and keep you informed until your cargo is delivered."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuGlobe",
+                      "title": "Global Network",
+                      "description": "Trusted carrier partners\nacross major trade\nlanes."
+                    },
+                    {
+                      "icon": "LuFileText",
+                      "title": "Documentation",
+                      "description": "Accurate paperwork for\nsmooth, delay-free\nshipments."
+                    },
+                    {
+                      "icon": "LuClipboardList",
+                      "title": "Shipment Tracking",
+                      "description": "Real-time updates\nat every stage."
+                    },
+                    {
+                      "icon": "LuSettings",
+                      "title": "Multimodal Planning",
+                      "description": "Road, sea and air\ncombined for the\nbest route."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nFreight Forwarding?",
+                    "titleHighlight": "Freight Forwarding?",
+                    "description": "We combine global reach, carrier relationships\nand expert planning to move your cargo\nquickly, safely and cost-effectively.",
+                    "items": [
+                      {
+                        "title": "Competitive Rates",
+                        "description": "Negotiated carrier rates that\nlower your freight spend."
+                      },
+                      {
+                        "title": "Single Point of Contact",
+                        "description": "One dedicated team managing\nyour shipment end to end."
+                      },
+                      {
+                        "title": "Flexible Routing",
+                        "description": "Options to balance speed, cost\nand reliability."
+                      },
+                      {
+                        "title": "Risk Management",
+                        "description": "Cargo insurance and proactive\nexception handling."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "domestic-transportation",
+                  "url": "/services/service-details",
+                  "title": "Domestic Transportation",
+                  "navLabel": "Domestic Transportation",
+                  "icon": "LuTruck",
+                  "excerpt": "Reliable and efficient domestic\ntransportation services for\nbusinesses of all sizes.",
+                  "image": "/images/gallery-highway-truck.webp",
+                  "paragraphs": [
+                    "At Haulix, our domestic transportation services connect factories, warehouses and retail locations with a modern fleet and experienced drivers. We offer full truckload, part load and dedicated vehicle options to match the size and urgency of every shipment.",
+                    "Planned routes, GPS-enabled vehicles and a responsive operations team help us deliver on schedule while keeping your transportation costs under control."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuTruck",
+                      "title": "Modern Fleet",
+                      "description": "Well-maintained vehicles\nfor every load\nsize."
+                    },
+                    {
+                      "icon": "LuPackage",
+                      "title": "FTL & LTL",
+                      "description": "Full and part load\noptions to suit your\nneeds."
+                    },
+                    {
+                      "icon": "LuClipboardList",
+                      "title": "GPS Tracking",
+                      "description": "Live visibility of\nevery consignment."
+                    },
+                    {
+                      "icon": "LuSettings",
+                      "title": "Route Planning",
+                      "description": "Optimised routes for\nfaster, cheaper\ndelivery."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nDomestic Transportation?",
+                    "titleHighlight": "Domestic Transportation?",
+                    "description": "We combine a reliable fleet, trained drivers\nand smart planning to deliver your goods\nsafely and on time across the country.",
+                    "items": [
+                      {
+                        "title": "On-Time Delivery",
+                        "description": "Scheduled pickups and committed\ndelivery windows."
+                      },
+                      {
+                        "title": "Trained Drivers",
+                        "description": "Experienced drivers focused on\nsafe cargo handling."
+                      },
+                      {
+                        "title": "Pan-India Coverage",
+                        "description": "Reliable service to metros and\nremote locations."
+                      },
+                      {
+                        "title": "Transparent Pricing",
+                        "description": "Clear quotes with no hidden\ncharges."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "international-shipping",
+                  "url": "/services/service-details",
+                  "title": "International Shipping",
+                  "navLabel": "International Shipping",
+                  "icon": "LuPlane",
+                  "excerpt": "Global shipping solutions with\ncomplete documentation,\ncustoms support and real-time\ntracking.",
+                  "image": "/images/blog-detail-air-cargo.webp",
+                  "paragraphs": [
+                    "At Haulix, we make international shipping simple. Our team handles export and import documentation, carrier bookings and customs coordination so your goods move across borders without unnecessary delays.",
+                    "With sea and air freight options, consolidated and dedicated services and real-time tracking, we help you reach new markets with confidence."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuShip",
+                      "title": "Sea Freight",
+                      "description": "FCL and LCL services\nfor large shipments."
+                    },
+                    {
+                      "icon": "LuPlane",
+                      "title": "Air Freight",
+                      "description": "Fast delivery for\nurgent and high-value\ncargo."
+                    },
+                    {
+                      "icon": "LuFileText",
+                      "title": "Customs Support",
+                      "description": "Expert help with\ncompliance and\nclearance."
+                    },
+                    {
+                      "icon": "LuGlobe",
+                      "title": "Global Reach",
+                      "description": "Shipping to and from\nmajor ports\nworldwide."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nInternational Shipping?",
+                    "titleHighlight": "International Shipping?",
+                    "description": "We combine global partnerships, customs\nexpertise and real-time visibility to move\nyour cargo across borders smoothly.",
+                    "items": [
+                      {
+                        "title": "Complete Documentation",
+                        "description": "Accurate export and import\npaperwork for every shipment."
+                      },
+                      {
+                        "title": "Real-Time Tracking",
+                        "description": "Know where your cargo is at\nevery stage."
+                      },
+                      {
+                        "title": "Port-to-Door Service",
+                        "description": "Seamless delivery from origin\nport to final destination."
+                      },
+                      {
+                        "title": "Cost-Effective Options",
+                        "description": "Consolidated shipping to reduce\nyour costs."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "warehousing-storage",
+                  "url": "/services/service-details",
+                  "title": "Warehousing & Storage",
+                  "navLabel": "Warehousing",
+                  "detailTitle": "Warehousing",
+                  "icon": "LuWarehouse",
+                  "excerpt": "Secure and modern warehousing\nfacilities to store your goods\nwith complete safety.",
+                  "image": "/images/service-warehousing.webp",
+                  "paragraphs": [
+                    "At Haulix, we provide secure, modern and flexible warehousing solutions to meet your storage and distribution needs. Our strategically located warehouses are equipped with advanced infrastructure, inventory management systems and round-the-clock security to ensure your goods are always safe and ready for dispatch.",
+                    "Whether you need short-term storage or long-term warehousing, we offer scalable solutions that help you optimize your supply chain, reduce costs and improve delivery efficiency."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuWarehouse",
+                      "title": "Secure Facilities",
+                      "description": "Advanced security\nsystems for complete\nsafety."
+                    },
+                    {
+                      "icon": "LuPackage",
+                      "title": "Flexible Storage",
+                      "description": "Short-term and\nlong-term options to\nsuit your needs."
+                    },
+                    {
+                      "icon": "LuClipboardList",
+                      "title": "Inventory\nManagement",
+                      "description": "Real-time tracking\nand stock control."
+                    },
+                    {
+                      "icon": "LuSettings",
+                      "title": "Strategic Locations",
+                      "description": "Centrally located\nwarehouses for faster\ndistribution."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nWarehousing Service?",
+                    "titleHighlight": "Warehousing Service?",
+                    "description": "We combine modern infrastructure, advanced\ntechnology and experienced teams to deliver\nreliable warehousing solutions for your business.",
+                    "items": [
+                      {
+                        "title": "Modern Infrastructure",
+                        "description": "Clean, spacious and well-maintained\nstorage facilities."
+                      },
+                      {
+                        "title": "24/7 Security",
+                        "description": "CCTV surveillance, access control\nand continuous monitoring."
+                      },
+                      {
+                        "title": "Efficient Inventory Management",
+                        "description": "Real-time stock tracking and reporting\nsystems."
+                      },
+                      {
+                        "title": "Cost-Effective Solutions",
+                        "description": "Flexible plans to reduce your\noperational costs."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "supply-chain-solutions",
+                  "url": "/services/service-details",
+                  "title": "Supply Chain Solutions",
+                  "navLabel": "Supply Chain Solutions",
+                  "icon": "LuPackage",
+                  "excerpt": "Customized supply chain\nmanagement to improve\nefficiency and reduce costs.",
+                  "image": "/images/gallery-sorting-line.webp",
+                  "paragraphs": [
+                    "At Haulix, we design supply chain solutions around the way your business works. From procurement and inbound logistics to order fulfilment and distribution, we connect every link with clear processes and the right technology.",
+                    "Our consultants analyse your network, remove bottlenecks and build a leaner, more responsive supply chain that lowers costs and improves service levels."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuClipboardList",
+                      "title": "Network Planning",
+                      "description": "Data-driven design of\nyour logistics\nnetwork."
+                    },
+                    {
+                      "icon": "LuPackage",
+                      "title": "Order Fulfilment",
+                      "description": "Pick, pack and dispatch\nhandled with\naccuracy."
+                    },
+                    {
+                      "icon": "LuSettings",
+                      "title": "Process Optimisation",
+                      "description": "Leaner workflows and\nlower costs."
+                    },
+                    {
+                      "icon": "LuGlobe",
+                      "title": "End-to-End Visibility",
+                      "description": "One view of your\nentire supply\nchain."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nSupply Chain Solutions?",
+                    "titleHighlight": "Supply Chain Solutions?",
+                    "description": "We combine industry expertise, technology\nand integrated services to build supply\nchains that grow with your business.",
+                    "items": [
+                      {
+                        "title": "Tailored Strategies",
+                        "description": "Solutions designed around your\nproducts and customers."
+                      },
+                      {
+                        "title": "Integrated Services",
+                        "description": "Transport, storage and fulfilment\nunder one roof."
+                      },
+                      {
+                        "title": "Smart Reporting",
+                        "description": "Clear KPIs and regular performance\nreviews."
+                      },
+                      {
+                        "title": "Scalable Operations",
+                        "description": "Capacity that adapts to seasonal\ndemand."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "custom-clearance",
+                  "url": "/services/service-details",
+                  "title": "Custom Clearance",
+                  "navLabel": "Custom Clearance",
+                  "icon": "LuUserCheck",
+                  "excerpt": "Hassle-free customs clearance\nwith expert support and\ncompliance management.",
+                  "image": "/images/gallery-port-inspection.webp",
+                  "paragraphs": [
+                    "At Haulix, our licensed customs specialists take care of tariff classification, duty calculation, documentation and filings so your shipments clear customs quickly and correctly.",
+                    "We stay up to date with changing regulations and work closely with authorities to minimise inspections, avoid penalties and keep your cargo moving."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuFileText",
+                      "title": "Document Filing",
+                      "description": "Accurate declarations\nand supporting\npaperwork."
+                    },
+                    {
+                      "icon": "LuDatabase",
+                      "title": "Duty Assessment",
+                      "description": "Correct classification\nand duty\ncalculation."
+                    },
+                    {
+                      "icon": "LuShieldCheck",
+                      "title": "Compliance",
+                      "description": "Up-to-date with\nlatest regulations."
+                    },
+                    {
+                      "icon": "LuClock",
+                      "title": "Fast Clearance",
+                      "description": "Quick release of\nyour cargo at\nports."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nCustom Clearance?",
+                    "titleHighlight": "Custom Clearance?",
+                    "description": "We combine regulatory knowledge, licensed\nexperts and proactive communication to clear\nyour shipments without delays.",
+                    "items": [
+                      {
+                        "title": "Licensed Experts",
+                        "description": "Experienced customs brokers\nhandling your filings."
+                      },
+                      {
+                        "title": "Fewer Delays",
+                        "description": "Correct paperwork that avoids\nholds and inspections."
+                      },
+                      {
+                        "title": "Penalty Protection",
+                        "description": "Compliance checks before every\nsubmission."
+                      },
+                      {
+                        "title": "Clear Communication",
+                        "description": "Status updates until your cargo\nis released."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "project-logistics",
+                  "url": "/services/service-details",
+                  "title": "Project Logistics",
+                  "navLabel": "Project Logistics",
+                  "icon": "TbTruckDelivery",
+                  "excerpt": "Specialized logistics solutions\nfor large, heavy and time-critical\nshipments.",
+                  "image": "/images/gallery-reach-stacker.webp",
+                  "paragraphs": [
+                    "At Haulix, we plan and execute complex project shipments, including heavy machinery, oversized equipment and time-critical industrial cargo. Every move starts with a detailed survey, route study and handling plan.",
+                    "From specialised trailers and cranes to permits and escorts, our project team coordinates every detail so your cargo arrives safely and on schedule."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuClipboardList",
+                      "title": "Route Surveys",
+                      "description": "Detailed planning for\noversized cargo."
+                    },
+                    {
+                      "icon": "LuTruck",
+                      "title": "Special Equipment",
+                      "description": "Low-bed trailers,\ncranes and lifting\ngear."
+                    },
+                    {
+                      "icon": "LuFileText",
+                      "title": "Permits & Escorts",
+                      "description": "All approvals handled\nfor you."
+                    },
+                    {
+                      "icon": "LuClock",
+                      "title": "Time-Critical Moves",
+                      "description": "Strict schedules for\nproject\nmilestones."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nProject Logistics?",
+                    "titleHighlight": "Project Logistics?",
+                    "description": "We combine engineering know-how, special\nequipment and careful planning to move your\nlargest and most critical cargo.",
+                    "items": [
+                      {
+                        "title": "Dedicated Project Team",
+                        "description": "One team managing your project\nfrom start to finish."
+                      },
+                      {
+                        "title": "Heavy-Lift Expertise",
+                        "description": "Safe handling of oversized and\nheavy cargo."
+                      },
+                      {
+                        "title": "Detailed Planning",
+                        "description": "Surveys, risk checks and\ncontingency plans."
+                      },
+                      {
+                        "title": "On-Schedule Delivery",
+                        "description": "Moves aligned with your project\ntimelines."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "last-mile-delivery",
+                  "url": "/services/service-details",
+                  "title": "Last Mile Delivery",
+                  "navLabel": "Last Mile Delivery",
+                  "icon": "TbTruckDelivery",
+                  "excerpt": "Fast and reliable last mile\ndelivery to ensure your goods\nreach their final destination\non time.",
+                  "image": "/images/gallery-loading-dock.webp",
+                  "paragraphs": [
+                    "At Haulix, our last mile delivery service gets your products to customers' doors quickly and reliably. Local hubs, optimised delivery routes and trained delivery partners keep every drop on time.",
+                    "Real-time tracking, proof of delivery and flexible delivery slots give you and your customers complete confidence in every order."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuClock",
+                      "title": "Same-Day Options",
+                      "description": "Fast delivery within\nthe city."
+                    },
+                    {
+                      "icon": "LuClipboardList",
+                      "title": "Proof of Delivery",
+                      "description": "Digital confirmation\nfor every\norder."
+                    },
+                    {
+                      "icon": "FaMapMarkerAlt",
+                      "title": "Live Tracking",
+                      "description": "Customers follow their\norder in real\ntime."
+                    },
+                    {
+                      "icon": "LuSettings",
+                      "title": "Route Optimisation",
+                      "description": "Smarter routes for\nfaster drops."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nLast Mile Delivery?",
+                    "titleHighlight": "Last Mile Delivery?",
+                    "description": "We combine local hubs, smart routing and\ncustomer-friendly service to complete every\ndelivery on time.",
+                    "items": [
+                      {
+                        "title": "Local Delivery Hubs",
+                        "description": "Closer to your customers for\nfaster delivery."
+                      },
+                      {
+                        "title": "Flexible Time Slots",
+                        "description": "Deliveries planned around your\ncustomers."
+                      },
+                      {
+                        "title": "Careful Handling",
+                        "description": "Trained partners who protect\nevery parcel."
+                      },
+                      {
+                        "title": "Happy Customers",
+                        "description": "Reliable service that builds\nrepeat orders."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "cold-chain-logistics",
+                  "url": "/services/service-details",
+                  "title": "Cold Chain Logistics",
+                  "navLabel": "Cold Chain Logistics",
+                  "icon": "LuBox",
+                  "excerpt": "Temperature-controlled transport\nand storage for food, pharma\nand other sensitive goods.",
+                  "image": "/images/gallery-stock-check.webp",
+                  "paragraphs": [
+                    "At Haulix, our cold chain service keeps temperature-sensitive cargo within the right range from pickup to delivery. Reefer trucks, refrigerated containers and cold storage facilities protect food, pharmaceuticals and chemicals at every step.",
+                    "Continuous temperature monitoring, alerts and detailed reports give you full visibility and help you meet quality and compliance requirements."
+                  ],
+                  "features": [
+                    {
+                      "icon": "LuShieldCheck",
+                      "title": "Temperature Control",
+                      "description": "Chilled and frozen\nranges kept\nsteady."
+                    },
+                    {
+                      "icon": "LuClock",
+                      "title": "Live Monitoring",
+                      "description": "Round-the-clock\ntemperature\ntracking."
+                    },
+                    {
+                      "icon": "LuTruck",
+                      "title": "Reefer Fleet",
+                      "description": "Refrigerated trucks\nand containers."
+                    },
+                    {
+                      "icon": "LuClipboardList",
+                      "title": "Compliance Reports",
+                      "description": "Records for audits\nand quality\nchecks."
+                    }
+                  ],
+                  "benefits": {
+                    "title": "Why Choose Our\nCold Chain Logistics?",
+                    "titleHighlight": "Cold Chain Logistics?",
+                    "description": "We combine refrigerated equipment, live\nmonitoring and trained teams to keep your\nsensitive cargo safe.",
+                    "items": [
+                      {
+                        "title": "Product Quality",
+                        "description": "Goods arrive fresh and within\nspecification."
+                      },
+                      {
+                        "title": "Less Spoilage",
+                        "description": "Fewer losses from temperature\nchanges."
+                      },
+                      {
+                        "title": "Full Visibility",
+                        "description": "Temperature data for every\nshipment."
+                      },
+                      {
+                        "title": "Expert Handling",
+                        "description": "Teams trained for sensitive\ncargo."
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "ServiceDetail": {
+          "variants": {
+            "LogisticsServiceDetail1": {
+              "sidebarTitle": "OUR SERVICES",
+              "contactTitle": "CONTACT INFO",
+              "contact": [
+                {
+                  "icon": "FaMapMarkerAlt",
+                  "label": "Address",
+                  "field": "address"
+                },
+                {
+                  "icon": "FaPhoneAlt",
+                  "label": "Phone Number",
+                  "field": "phone"
+                },
+                {
+                  "icon": "FaEnvelope",
+                  "label": "Email Address",
+                  "field": "emails"
+                }
+              ],
+              "overviewLabel": "SERVICE OVERVIEW",
+              "benefitsLabel": "KEY BENEFITS"
+            }
+          }
+        },
+        "WhyChooseUs": {
+          "variants": {
+            "LogisticsWhyChooseUs1": {
+              "label": "WHY CHOOSE US",
+              "title": "Your Trusted Logistics\nPartner for Every Move",
+              "titleHighlight": "Every Move",
+              "description": "At Haulix, we go beyond transportation. We deliver reliable, efficient and\ncost-effective logistics solutions tailored to your business needs, ensuring\nyour cargo reaches its destination safely and on time.",
+              "images": {
+                "main": "/images/why-ship-port.webp",
+                "secondary": "/images/why-truck.webp",
+                "mainAlt": "Container ship docked at the port",
+                "secondaryAlt": "Haulix truck on the road at sunset"
+              },
+              "items": [
+                {
+                  "icon": "LuShieldCheck",
+                  "title": "Reliable Service",
+                  "description": "Safe and on-time delivery\nwith complete cargo\nsecurity."
+                },
+                {
+                  "icon": "LuUsers",
+                  "title": "Experienced Team",
+                  "description": "A skilled and dedicated\nteam to handle your\nlogistics needs."
+                },
+                {
+                  "icon": "LuSettings",
+                  "title": "Cost Efficient",
+                  "description": "Smart solutions to\noptimize your shipping\ncosts."
+                },
+                {
+                  "icon": "LuGlobe",
+                  "title": "Global Reach",
+                  "description": "Seamless logistics\nsupport across domestic\nand international routes."
+                }
+              ]
+            }
+          }
+        },
+        "Cta": {
+          "variants": {
+            "LogisticsCta1": {
+              "label": "GET IN TOUCH",
+              "title": "Looking for a Reliable\nLogistics Partner?",
+              "titleHighlight": "Logistics Partner",
+              "description": "Let Haulix handle your transportation needs with safe, efficient and\ncost-effective solutions tailored to your business.",
+              "background": "/images/cta-bg.webp",
+              "buttonText": "CONTACT US",
+              "buttonUrl": "/contact-us"
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "LogisticsTestimonials1": {
+              "label": "TESTIMONIALS",
+              "title": "What Our Clients Say",
+              "titleHighlight": "Clients Say",
+              "description": "Trusted by businesses across industries, our clients appreciate our commitment\nto reliable, efficient and cost-effective logistics solutions.",
+              "perPage": 6,
+              "items": [
+                {
+                  "quote": "Haulix has been a reliable logistics\npartner for our business. Their team\nensures on-time delivery, clear\ncommunication and complete cargo\nsafety at every stage. We highly\nrecommend their services.",
+                  "name": "Rahul Mehta",
+                  "role": "Operations Manager",
+                  "company": "Mehta Industries"
+                },
+                {
+                  "quote": "Professional, efficient and\ncustomer-focused. Haulix has\nsimplified our supply chain with\nseamless logistics solutions. Their\ncommitment to quality and timely\ndelivery makes them a trusted\npartner for our company.",
+                  "name": "Priya Sharma",
+                  "role": "Supply Chain Head",
+                  "company": "Sharma Exports"
+                },
+                {
+                  "quote": "Their logistics solutions are not only\ncost-effective but also extremely\nreliable. The Haulix team is proactive,\nresponsive and always ensures our\nshipments reach on time without\nany hassle.",
+                  "name": "Amit Verma",
+                  "role": "Director",
+                  "company": "Verma Enterprises"
+                },
+                {
+                  "quote": "Haulix handled our cold chain\nshipments with great care. Every\ndelivery arrived on time and within\nthe right temperature range. Their\nreports made our audits simple.",
+                  "name": "Sneha Iyer",
+                  "role": "Quality Manager",
+                  "company": "FreshFarm Foods"
+                },
+                {
+                  "quote": "We moved our entire warehouse\ninventory with Haulix and the process\nwas smooth from start to finish.\nThe team planned every detail and\nkept us updated throughout.",
+                  "name": "Arjun Nair",
+                  "role": "Warehouse Head",
+                  "company": "Nair Retail Group"
+                },
+                {
+                  "quote": "Customs clearance used to delay\nour imports for days. With Haulix,\nour paperwork is handled correctly\nthe first time and our cargo is\nreleased much faster.",
+                  "name": "Kavita Desai",
+                  "role": "Import Manager",
+                  "company": "Desai Traders"
+                },
+                {
+                  "quote": "Their road transport network is\nreliable and well managed. Live\ntracking and quick support from the\nteam give us complete confidence\nin every shipment we send.",
+                  "name": "Rohit Bansal",
+                  "role": "Logistics Lead",
+                  "company": "Bansal Manufacturing"
+                }
+              ]
+            }
+          }
+        },
+        "Blogs": {
+          "variants": {
+            "LogisticsBlogs1": {
+              "label": "OUR BLOGS",
+              "title": "Latest Insights & Updates",
+              "titleHighlight": "Insights & Updates",
+              "description": "Expert insights, market analysis, and shipping strategies to navigate global trade.",
+              "readMore": "Read More",
+              "perPage": 8,
+              "posts": [
+                {
+                  "id": "the-growing-importance-of-air-freight-in-global-trade",
+                  "url": "/blogs/blog-details",
+                  "title": "The Growing Importance\nof Air Freight in Global Trade",
+                  "date": "2025-04-24",
+                  "comments": 7,
+                  "author": "Admin",
+                  "excerpt": "Discover how air freight is\nhelping businesses move faster\nand expand globally in today’s\ncompetitive market.",
+                  "image": "/images/blog-air-freight.webp",
+                  "thumbnail": "/images/post-best-logistics.webp",
+                  "cover": "/images/blog-detail-air-cargo.webp",
+                  "intro": [
+                    "Air freight has become a vital component of global trade, enabling businesses to move goods quickly, safely, and efficiently across international borders. In today’s fast-paced market, companies rely on air cargo to meet tight deadlines, reduce lead times, and keep their supply chains running smoothly.",
+                    "With the growth of e-commerce, perishable goods, and high-value shipments, the demand for air freight services continues to rise. It offers unmatched speed and reliability, making it the preferred choice for industries such as pharmaceuticals, electronics, automotive, and fashion."
+                  ],
+                  "quote": {
+                    "text": "In a globally connected world, air freight bridges distances\nand creates opportunities for businesses to grow beyond borders.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "Modern air freight solutions are supported by advanced tracking systems, secure handling processes, and a wide network of global carriers. This ensures that shipments reach their destination on time, in perfect condition, and with complete transparency."
+                  ],
+                  "gallery": [
+                    "/images/blog-gallery-loading.webp",
+                    "/images/blog-gallery-pallets.webp",
+                    "/images/blog-gallery-takeoff.webp"
+                  ],
+                  "conclusion": [
+                    "As global trade continues to evolve, air freight will remain a key driver of business growth, helping companies expand into new markets and maintain a competitive edge in the international landscape."
+                  ]
+                },
+                {
+                  "id": "how-efficient-logistics-drive-business-growth",
+                  "url": "/blogs/blog-details",
+                  "title": "How Efficient Logistics\nDrive Business Growth",
+                  "date": "2025-04-21",
+                  "comments": 3,
+                  "author": "Admin",
+                  "excerpt": "Learn how a well-optimized\nlogistics strategy can reduce\ncosts, improve delivery times\nand support long-term growth.",
+                  "image": "/images/blog-container-lift.webp",
+                  "thumbnail": "/images/post-careful-handling.webp",
+                  "cover": "/images/blog-container-lift.webp",
+                  "intro": [
+                    "Efficient logistics is far more than moving goods from one place to another. It shapes how quickly businesses respond to customers, how much they spend on operations and how easily they can scale into new markets.",
+                    "Companies that invest in well-planned transport, smart warehousing and accurate inventory control consistently deliver faster, reduce waste and free up working capital for growth."
+                  ],
+                  "quote": {
+                    "text": "A well-run supply chain turns logistics from a cost centre\ninto a real competitive advantage.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "Route optimisation, load consolidation and real-time visibility help businesses cut transport costs while improving reliability. Clear data also makes it easier to forecast demand and plan capacity ahead of peak seasons."
+                  ],
+                  "gallery": [
+                    "/images/gallery-container-handling.webp",
+                    "/images/gallery-warehouse-forklift.webp",
+                    "/images/gallery-truck-fleet.webp"
+                  ],
+                  "conclusion": [
+                    "By treating logistics as a strategic function, businesses can lower costs, delight customers with faster deliveries and build a strong foundation for long-term growth."
+                  ]
+                },
+                {
+                  "id": "key-factors-for-safe-and-reliable-transportation",
+                  "url": "/blogs/blog-details",
+                  "title": "Key Factors for Safe\nand Reliable Transportation",
+                  "date": "2025-04-17",
+                  "comments": 10,
+                  "author": "Admin",
+                  "excerpt": "Explore the essential practices\nthat ensure your cargo reaches\nits destination safely and\non time.",
+                  "image": "/images/blog-truck-highway.webp",
+                  "thumbnail": "/images/post-digital-supply.webp",
+                  "cover": "/images/blog-truck-highway.webp",
+                  "intro": [
+                    "Safe and reliable transportation starts long before a truck leaves the loading dock. Proper packaging, correct load securing and well-maintained vehicles are the foundation of every successful delivery.",
+                    "Experienced drivers, planned routes and clear communication between shippers, carriers and receivers further reduce the risk of damage and delays."
+                  ],
+                  "quote": {
+                    "text": "Every safe delivery is the result of careful planning,\ntrained people and the right equipment.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "GPS tracking, temperature monitoring and regular safety audits give businesses complete visibility of their cargo. When issues do arise, a responsive operations team can act quickly to keep shipments on schedule."
+                  ],
+                  "gallery": [
+                    "/images/gallery-highway-truck.webp",
+                    "/images/gallery-loading-dock.webp",
+                    "/images/gallery-stock-check.webp"
+                  ],
+                  "conclusion": [
+                    "By focusing on these key factors, businesses can protect their goods, meet delivery commitments and build lasting trust with their customers."
+                  ]
+                },
+                {
+                  "id": "sustainable-logistics-for-a-greener-tomorrow",
+                  "url": "/blogs/blog-details",
+                  "title": "Sustainable Logistics\nfor a Greener Tomorrow",
+                  "date": "2025-04-15",
+                  "comments": 6,
+                  "author": "Admin",
+                  "excerpt": "Find out how innovative\nlogistics solutions are reducing\nenvironmental impact and\nbuilding a more sustainable future.",
+                  "image": "/images/blog-port-ship.webp",
+                  "thumbnail": "/images/post-green-logistics.webp",
+                  "cover": "/images/blog-port-ship.webp",
+                  "intro": [
+                    "Sustainability has become a priority for businesses and customers alike. The logistics industry is responding with cleaner vehicles, smarter routing and more efficient warehouses that reduce emissions without slowing down deliveries.",
+                    "From fuel-efficient fleets to optimised container loading, every improvement helps lower the environmental footprint of global trade."
+                  ],
+                  "quote": {
+                    "text": "Greener logistics is not just good for the planet,\nit is good for business too.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "Modal shifts from road to rail and sea, reusable packaging and energy-efficient storage facilities all contribute to a more sustainable supply chain while often reducing operating costs."
+                  ],
+                  "gallery": [
+                    "/images/gallery-ship-aerial.webp",
+                    "/images/gallery-container-ship.webp",
+                    "/images/gallery-sorting-line.webp"
+                  ],
+                  "conclusion": [
+                    "As technology and regulations continue to evolve, sustainable logistics will play a central role in building a cleaner, more resilient future for global trade."
+                  ]
+                },
+                {
+                  "id": "how-warehouse-automation-is-shaping-the-future",
+                  "url": "/blogs/blog-details",
+                  "title": "How Warehouse Automation\nIs Shaping the Future",
+                  "date": "2025-04-10",
+                  "comments": 5,
+                  "author": "Admin",
+                  "excerpt": "Learn how automated systems\nare making warehouses faster,\nmore accurate and easier\nto scale.",
+                  "image": "/images/service-warehouse.webp",
+                  "thumbnail": "/images/blog-gallery-pallets.webp",
+                  "cover": "/images/service-warehouse.webp",
+                  "intro": [
+                    "Warehouses are under pressure to handle more orders in less time. Automation, from barcode scanning to conveyor systems and warehouse management software, helps teams keep up without losing accuracy.",
+                    "Automated stock tracking also gives businesses a clearer view of inventory, so they can plan replenishment and avoid stockouts."
+                  ],
+                  "quote": {
+                    "text": "Automation lets people focus on the work\nthat needs human judgement.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "The best results come from combining technology with skilled teams. Automation handles repetitive tasks, while trained staff manage exceptions, quality checks and customer requirements."
+                  ],
+                  "gallery": [
+                    "/images/gallery-warehouse-forklift.webp",
+                    "/images/gallery-sorting-line.webp",
+                    "/images/gallery-stock-check.webp"
+                  ],
+                  "conclusion": [
+                    "As order volumes grow, warehouse automation will be key for businesses that want faster fulfilment and fewer errors."
+                  ]
+                },
+                {
+                  "id": "road-sea-or-air-choosing-the-right-freight-mode",
+                  "url": "/blogs/blog-details",
+                  "title": "Road, Sea or Air: Choosing\nthe Right Freight Mode",
+                  "date": "2025-04-04",
+                  "comments": 8,
+                  "author": "Admin",
+                  "excerpt": "Compare cost, speed and\nreliability to pick the best\ntransport mode for every\nshipment.",
+                  "image": "/images/service-sea.webp",
+                  "thumbnail": "/images/service-road.webp",
+                  "cover": "/images/service-sea.webp",
+                  "intro": [
+                    "Every shipment has different needs. Some cargo must arrive tomorrow, while other goods can travel slowly if it keeps costs down. Choosing the right freight mode makes a big difference to both budget and delivery time.",
+                    "Road, sea and air freight each have clear strengths, and many supply chains use a mix of all three."
+                  ],
+                  "quote": {
+                    "text": "The right mode is the one that balances\ncost, speed and reliability.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "Road freight is flexible for domestic and regional moves, sea freight is the most economical for large international volumes, and air freight is the fastest option for urgent or high-value goods."
+                  ],
+                  "gallery": [
+                    "/images/gallery-highway-truck.webp",
+                    "/images/gallery-container-ship.webp",
+                    "/images/service-air.webp"
+                  ],
+                  "conclusion": [
+                    "Working with a logistics partner who offers every mode helps you choose the best option for each shipment as your needs change."
+                  ]
+                },
+                {
+                  "id": "simple-tips-for-faster-customs-clearance",
+                  "url": "/blogs/blog-details",
+                  "title": "Simple Tips for Faster\nCustoms Clearance",
+                  "date": "2025-03-28",
+                  "comments": 4,
+                  "author": "Admin",
+                  "excerpt": "Avoid delays at the port\nwith correct paperwork and\nbetter planning for every\nshipment.",
+                  "image": "/images/gallery-port-inspection.webp",
+                  "thumbnail": "/images/quote-port-worker.webp",
+                  "cover": "/images/gallery-port-inspection.webp",
+                  "intro": [
+                    "Customs delays can hold cargo at the port for days and add storage charges. In most cases, the cause is missing or incorrect documents rather than the goods themselves.",
+                    "A little preparation before shipping can save time and money at clearance."
+                  ],
+                  "quote": {
+                    "text": "Correct paperwork is the fastest route\nthrough customs.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "Check that invoices, packing lists and product codes match, confirm duties in advance and share documents with your customs broker early. Clear product descriptions also reduce the chance of inspections."
+                  ],
+                  "gallery": [
+                    "/images/gallery-container-handling.webp",
+                    "/images/gallery-reach-stacker.webp",
+                    "/images/blog-gallery-loading.webp"
+                  ],
+                  "conclusion": [
+                    "With careful planning and an experienced clearance team, your cargo can move through customs smoothly and reach customers on time."
+                  ]
+                },
+                {
+                  "id": "why-real-time-tracking-matters-for-shippers",
+                  "url": "/blogs/blog-details",
+                  "title": "Why Real-Time Tracking\nMatters for Shippers",
+                  "date": "2025-03-21",
+                  "comments": 3,
+                  "author": "Admin",
+                  "excerpt": "See how live shipment\nvisibility helps businesses\nplan better and keep\ncustomers informed.",
+                  "image": "/images/gallery-truck-fleet.webp",
+                  "thumbnail": "/images/why-truck.webp",
+                  "cover": "/images/gallery-truck-fleet.webp",
+                  "intro": [
+                    "Customers today expect to know exactly where their orders are. Real-time tracking gives shippers and receivers live updates on location, status and expected arrival time.",
+                    "This visibility helps teams react quickly when plans change and reduces the number of status calls and emails."
+                  ],
+                  "quote": {
+                    "text": "When you can see your cargo,\nyou can plan around it.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "Tracking data also helps businesses improve over time. Delivery times, delays and route performance can be reviewed to find bottlenecks and make the supply chain more efficient."
+                  ],
+                  "gallery": [
+                    "/images/gallery-highway-truck.webp",
+                    "/images/gallery-team-review.webp",
+                    "/images/gallery-loading-dock.webp"
+                  ],
+                  "conclusion": [
+                    "Real-time tracking turns logistics from a black box into a clear, manageable process for businesses and their customers."
+                  ]
+                },
+                {
+                  "id": "planning-your-logistics-for-the-peak-season",
+                  "url": "/blogs/blog-details",
+                  "title": "Planning Your Logistics\nfor the Peak Season",
+                  "date": "2025-03-14",
+                  "comments": 5,
+                  "author": "Admin",
+                  "excerpt": "Prepare early for busy\nseasons with smart capacity\nplanning and reliable\npartners.",
+                  "image": "/images/blog-gallery-takeoff.webp",
+                  "thumbnail": "/images/gallery-ship-aerial.webp",
+                  "cover": "/images/blog-gallery-takeoff.webp",
+                  "intro": [
+                    "Festive seasons and sales events bring a sharp rise in orders. Without early planning, businesses can face full warehouses, limited transport capacity and late deliveries.",
+                    "Preparing a few months ahead makes peak season far less stressful."
+                  ],
+                  "quote": {
+                    "text": "Peak season success starts\nwell before the peak.",
+                    "author": "Logistics Industry Expert"
+                  },
+                  "body": [
+                    "Forecast demand, book transport and storage capacity early and agree on clear timelines with your logistics partner. Keeping extra stock of best-selling items close to customers also speeds up delivery."
+                  ],
+                  "gallery": [
+                    "/images/blog-gallery-loading.webp",
+                    "/images/blog-gallery-pallets.webp",
+                    "/images/gallery-stock-check.webp"
+                  ],
+                  "conclusion": [
+                    "With the right plan and partner in place, peak season becomes an opportunity to grow rather than a risk to manage."
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "BlogDetail": {
+          "variants": {
+            "LogisticsBlogDetail1": {
+              "commentsLabel": "Comments",
+              "latestTitle": "Latest Posts",
+              "advice": {
+                "label": "NEED EXPERT ADVICE?",
+                "title": "Let’s Discuss\nYour Logistics Needs",
+                "buttonText": "CONTACT US",
+                "buttonUrl": "/contact-us"
+              },
+              "latestCount": 4,
+              "quoteFormat": "“{quote}”",
+              "quoteAuthorFormat": "— {author}"
+            }
+          }
+        },
+        "Team": {
+          "variants": {
+            "LogisticsTeam1": {
+              "label": "OUR TEAM",
+              "title": "Meet Our Experts",
+              "titleHighlight": "Experts",
+              "description": "Our experienced team brings together industry knowledge, operational expertise\nand a shared commitment to move your business forward.",
+              "perPage": 8,
+              "members": [
+                {
+                  "name": "Rajesh Mehta",
+                  "role": "Managing Director",
+                  "image": "/images/team-rajesh-mehta.webp"
+                },
+                {
+                  "name": "Neha Sharma",
+                  "role": "Operations Head",
+                  "image": "/images/team-neha-sharma.webp"
+                },
+                {
+                  "name": "Michael Carter",
+                  "role": "Business Development",
+                  "image": "/images/team-michael-carter.webp"
+                },
+                {
+                  "name": "Pooja Verma",
+                  "role": "Supply Chain Manager",
+                  "image": "/images/team-pooja-verma.webp"
+                },
+                {
+                  "name": "Daniel Thompson",
+                  "role": "Logistics Manager",
+                  "image": "/images/team-daniel-thompson.webp"
+                },
+                {
+                  "name": "Anjali Patel",
+                  "role": "Customer Relations",
+                  "image": "/images/team-anjali-patel.webp"
+                },
+                {
+                  "name": "Vikram Singh",
+                  "role": "Warehousing Head",
+                  "image": "/images/team-vikram-singh.webp"
+                },
+                {
+                  "name": "Karan Malhotra",
+                  "role": "Finance Manager",
+                  "image": "/images/team-karan-malhotra.webp"
+                },
+                {
+                  "name": "Sameer Khan",
+                  "role": "Fleet Operations Manager",
+                  "image": "/images/team-daniel-thompson.webp"
+                }
+              ],
+              "socials": [
+                {
+                  "id": "linkedin",
+                  "label": "LinkedIn",
+                  "icon": "FaLinkedinIn",
+                  "url": "https://www.linkedin.com"
+                },
+                {
+                  "id": "facebook",
+                  "label": "Facebook",
+                  "icon": "FaFacebookF",
+                  "url": "https://www.facebook.com"
+                },
+                {
+                  "id": "x",
+                  "label": "X",
+                  "icon": "FaXTwitter",
+                  "url": "https://x.com"
+                }
+              ]
+            }
+          }
+        },
+        "Gallery": {
+          "variants": {
+            "LogisticsGallery1": {
+              "label": "OUR GALLERY",
+              "title": "Our Work in Action",
+              "titleHighlight": "Action",
+              "description": "Explore our gallery to see our logistics operations, infrastructure, fleet, and team in action\nacross different locations.",
+              "perPage": 8,
+              "images": [
+                {
+                  "id": "gallery-1",
+                  "label": "Container ship at the port",
+                  "image": "/images/gallery-container-ship.webp"
+                },
+                {
+                  "id": "gallery-2",
+                  "label": "Forklift in the warehouse",
+                  "image": "/images/gallery-warehouse-forklift.webp"
+                },
+                {
+                  "id": "gallery-3",
+                  "label": "Haulix truck fleet",
+                  "image": "/images/gallery-truck-fleet.webp"
+                },
+                {
+                  "id": "gallery-4",
+                  "label": "Port cargo inspection",
+                  "image": "/images/gallery-port-inspection.webp"
+                },
+                {
+                  "id": "gallery-5",
+                  "label": "Container handling at the yard",
+                  "image": "/images/gallery-container-handling.webp"
+                },
+                {
+                  "id": "gallery-6",
+                  "label": "Parcel sorting line",
+                  "image": "/images/gallery-sorting-line.webp"
+                },
+                {
+                  "id": "gallery-7",
+                  "label": "Truck on the highway at sunset",
+                  "image": "/images/gallery-highway-truck.webp"
+                },
+                {
+                  "id": "gallery-8",
+                  "label": "Warehouse stock check",
+                  "image": "/images/gallery-stock-check.webp"
+                },
+                {
+                  "id": "gallery-9",
+                  "label": "Trucks at the loading dock",
+                  "image": "/images/gallery-loading-dock.webp"
+                },
+                {
+                  "id": "gallery-10",
+                  "label": "Reach stacker lifting a container",
+                  "image": "/images/gallery-reach-stacker.webp"
+                },
+                {
+                  "id": "gallery-11",
+                  "label": "Team reviewing shipment details",
+                  "image": "/images/gallery-team-review.webp"
+                },
+                {
+                  "id": "gallery-12",
+                  "label": "Aerial view of a cargo ship",
+                  "image": "/images/gallery-ship-aerial.webp"
+                }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "LogisticsContact1": {
+              "label": "CONTACT US",
+              "title": "Get In Touch",
+              "titleHighlight": "Touch",
+              "description": "We’re here to answer your questions and provide the best logistics solutions for\nyour business. Reach out to us through the form or our contact details.",
+              "form": {
+                "title": "Send Us a Message",
+                "titleHighlight": "Message",
+                "description": "Fill out the form below and our team will get back to you shortly.",
+                "button": "SEND MESSAGE",
+                "successTitle": "Thank you for reaching out!",
+                "success": "Your message has been received. Our team will get back to you shortly.",
+                "fields": [
+                  {
+                    "name": "fullName",
+                    "type": "text",
+                    "placeholder": "Full Name",
+                    "icon": "LuUser",
+                    "required": true
+                  },
+                  {
+                    "name": "company",
+                    "type": "text",
+                    "placeholder": "Company Name",
+                    "icon": "LuBuilding"
+                  },
+                  {
+                    "name": "email",
+                    "type": "email",
+                    "placeholder": "Email Address",
+                    "icon": "LuMail",
+                    "required": true
+                  },
+                  {
+                    "name": "phone",
+                    "type": "tel",
+                    "placeholder": "Phone Number",
+                    "icon": "LuPhone",
+                    "required": true
+                  },
+                  {
+                    "name": "serviceType",
+                    "type": "select",
+                    "placeholder": "Service Type",
+                    "icon": "LuBox",
+                    "required": true,
+                    "options": "services"
+                  },
+                  {
+                    "name": "origin",
+                    "type": "select",
+                    "placeholder": "Origin City / Port",
+                    "icon": "LuMapPin",
+                    "options": "cities"
+                  },
+                  {
+                    "name": "destination",
+                    "type": "select",
+                    "placeholder": "Destination City / Port",
+                    "icon": "LuMapPin",
+                    "required": true,
+                    "options": "cities"
+                  },
+                  {
+                    "name": "shipmentType",
+                    "type": "select",
+                    "placeholder": "Shipment Type",
+                    "icon": "LuBox",
+                    "options": "shipmentTypes"
+                  },
+                  {
+                    "name": "message",
+                    "type": "textarea",
+                    "placeholder": "Your Message",
+                    "icon": "LuFileText",
+                    "required": true,
+                    "full": true
+                  }
+                ]
+              },
+              "infoCards": [
+                {
+                  "icon": "FaPhoneAlt",
+                  "title": "Call Us",
+                  "field": "phone",
+                  "showTiming": true
+                },
+                {
+                  "icon": "FaEnvelope",
+                  "title": "Email Us",
+                  "field": "email",
+                  "note": "We reply within 24 hours"
+                },
+                {
+                  "icon": "FaMapMarkerAlt",
+                  "title": "Our Location",
+                  "field": "address"
+                },
+                {
+                  "icon": "LuClock",
+                  "title": "Business Hours",
+                  "field": "timing"
+                }
+              ],
+              "image": "/images/contact-office.webp",
+              "imageAlt": "Haulix office building",
+              "map": {
+                "label": "Open in Google Maps",
+                "alt": "Map showing our office location"
+              },
+              "highlights": [
+                {
+                  "icon": "LuTruck",
+                  "title": "Global Coverage",
+                  "description": "We serve clients worldwide"
+                },
+                {
+                  "icon": "LuShieldCheck",
+                  "title": "Reliable Service",
+                  "description": "On-time and secure delivery"
+                },
+                {
+                  "icon": "LuUsers",
+                  "title": "Expert Team",
+                  "description": "Dedicated logistics professionals"
+                },
+                {
+                  "icon": "LuHeadset",
+                  "title": "24/7 Support",
+                  "description": "Always here to help you"
+                }
+              ]
+            }
+          }
+        },
+        "Quote": {
+          "variants": {
+            "LogisticsQuote1": {
+              "label": "GET A QUOTE",
+              "title": "Request a Quote",
+              "titleHighlight": "Quote",
+              "description": "Share your logistics requirements with us and our team will provide you with a\ncustomized and competitive quote.",
+              "form": {
+                "title": "Get a Quick Quote",
+                "titleHighlight": "Quote",
+                "description": "Fill out the form below and our logistics expert will get back to you shortly\nwith the best possible rates and solutions.",
+                "button": "REQUEST A QUOTE",
+                "successTitle": "Thank you for your request!",
+                "success": "Your quote request has been received. Our logistics expert will contact you shortly.",
+                "fields": [
+                  {
+                    "name": "fullName",
+                    "type": "text",
+                    "placeholder": "Full Name",
+                    "icon": "LuUser",
+                    "required": true
+                  },
+                  {
+                    "name": "email",
+                    "type": "email",
+                    "placeholder": "Email Address",
+                    "icon": "LuMail",
+                    "required": true
+                  },
+                  {
+                    "name": "phone",
+                    "type": "tel",
+                    "placeholder": "Phone Number",
+                    "icon": "LuPhone",
+                    "required": true
+                  },
+                  {
+                    "name": "company",
+                    "type": "text",
+                    "placeholder": "Company Name",
+                    "icon": "LuBuilding"
+                  },
+                  {
+                    "name": "serviceType",
+                    "type": "select",
+                    "placeholder": "Service Type",
+                    "icon": "LuBox",
+                    "required": true,
+                    "options": "services"
+                  },
+                  {
+                    "name": "origin",
+                    "type": "select",
+                    "placeholder": "Origin City / Port",
+                    "icon": "LuMapPin",
+                    "required": true,
+                    "options": "cities"
+                  },
+                  {
+                    "name": "destination",
+                    "type": "select",
+                    "placeholder": "Destination City / Port",
+                    "icon": "LuMapPin",
+                    "required": true,
+                    "options": "cities"
+                  },
+                  {
+                    "name": "shipmentType",
+                    "type": "select",
+                    "placeholder": "Shipment Type",
+                    "icon": "LuBox",
+                    "options": "shipmentTypes"
+                  },
+                  {
+                    "name": "cargo",
+                    "type": "textarea",
+                    "placeholder": "Cargo Details",
+                    "icon": "LuFileText",
+                    "full": true
+                  },
+                  {
+                    "name": "weight",
+                    "type": "text",
+                    "placeholder": "Estimated Weight (kg/tons)",
+                    "icon": "LuBox"
+                  },
+                  {
+                    "name": "shippingDate",
+                    "type": "date",
+                    "placeholder": "Preferred Shipping Date",
+                    "icon": "LuCalendar"
+                  }
+                ]
+              },
+              "image": "/images/quote-port-worker.webp",
+              "imageAlt": "Logistics expert checking shipments at the container port",
+              "imagePoints": [
+                {
+                  "icon": "LuShieldCheck",
+                  "title": "Reliable Service",
+                  "description": "On-time & secure delivery"
+                },
+                {
+                  "icon": "LuDatabase",
+                  "title": "Competitive Rates",
+                  "description": "Value for your business"
+                },
+                {
+                  "icon": "LuHeadset",
+                  "title": "Expert Support",
+                  "description": "Dedicated logistics team"
+                }
+              ],
+              "assistance": {
+                "title": "Need Immediate Assistance?",
+                "titleHighlight": "Assistance?",
+                "description": "Our team is here to help you with your logistics requirements.",
+                "cards": [
+                  {
+                    "icon": "LuPhone",
+                    "title": "Call Us",
+                    "field": "phone"
+                  },
+                  {
+                    "icon": "LuMail",
+                    "title": "Email Us",
+                    "field": "email"
+                  },
+                  {
+                    "icon": "LuMapPin",
+                    "title": "Our Location",
+                    "field": "address"
+                  }
+                ]
+              },
+              "highlights": [
+                {
+                  "icon": "LuFileText",
+                  "title": "Customized Solution",
+                  "description": "Tailored to your specific\nrequirements"
+                },
+                {
+                  "icon": "LuShieldCheck",
+                  "title": "Transparent Pricing",
+                  "description": "No hidden charges"
+                },
+                {
+                  "icon": "LuTruck",
+                  "title": "Fast Response",
+                  "description": "Quick and reliable support"
+                },
+                {
+                  "icon": "LuUsers",
+                  "title": "Dedicated Support",
+                  "description": "From enquiry to delivery"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

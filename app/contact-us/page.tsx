@@ -1,37 +1,27 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import PageIntro from "@/components/PageIntro";
-import EnquiryForm from "@/components/EnquiryForm";
-import HighlightStrip from "@/components/HighlightStrip";
-import { site as data, pageTitle } from "@/data";
-import ContactDetails from "@/components/ContactDetails";
+import rawData from "@/data/templates.json";
+import type { LogisticsTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { Contact } from "@/components/sections/Contact";
 
-const { pages, contact } = data;
-const { title } = pages.contactUs;
+const templateData: LogisticsTemplateData = rawData;
+const sectionData = templateData.categories.Logistics.sections;
+const commonData = templateData.common;
+const services = (sectionData.Services?.variants?.LogisticsServices1?.items ?? []).map((item) => item.title);
 
-export const metadata: Metadata = { title: pageTitle(title) };
+export const metadata: Metadata = { ...commonData.contactBreadcrumb?.seo };
 
 export default function ContactUsPage() {
   return (
-    <>
-      <PageBanner title={title} />
-      <section data-white-section className="py-64 sm:py-80 xl:py-120 bg-white px-20 sm:px-40 lg:px-48 xl:px-95 [[data-white-section]+&]:pt-0!">
-        <PageIntro
-          label={contact.label}
-          title={contact.title}
-          highlight={contact.titleHighlight}
-          description={contact.description}
-        />
-        <div className="mt-36 flex flex-col gap-24 lg:flex-row lg:items-start xl:mt-40 xl:gap-22">
-          <div className="lg:w-[52%] xl:w-855 xl:shrink-0">
-            <EnquiryForm form={contact.form} />
-          </div>
-          <ContactDetails />
-        </div>
-        <div className="mt-28 xl:mt-32">
-          <HighlightStrip items={contact.highlights} />
-        </div>
-      </section>
-    </>
+    <main className="flex-1">
+      <Breadcrumb data={commonData.contactBreadcrumb} ui={commonData.globalUI} />
+      <Contact
+        data={sectionData.Contact?.variants?.LogisticsContact1}
+        company={commonData.company}
+        formOptions={commonData.formOptions}
+        services={services}
+        ui={commonData.globalUI}
+      />
+    </main>
   );
 }

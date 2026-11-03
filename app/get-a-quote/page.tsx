@@ -1,32 +1,27 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import PageIntro from "@/components/PageIntro";
-import EnquiryForm from "@/components/EnquiryForm";
-import HighlightStrip from "@/components/HighlightStrip";
-import { site as data, pageTitle } from "@/data";
-import QuoteAside from "@/components/QuoteAside";
+import rawData from "@/data/templates.json";
+import type { LogisticsTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { Quote } from "@/components/sections/Quote";
 
-const { pages, quote } = data;
-const { title } = pages.getAQuote;
+const templateData: LogisticsTemplateData = rawData;
+const sectionData = templateData.categories.Logistics.sections;
+const commonData = templateData.common;
+const services = (sectionData.Services?.variants?.LogisticsServices1?.items ?? []).map((item) => item.title);
 
-export const metadata: Metadata = { title: pageTitle(title) };
+export const metadata: Metadata = { ...commonData.quoteBreadcrumb?.seo };
 
 export default function GetAQuotePage() {
   return (
-    <>
-      <PageBanner title={title} />
-      <section data-white-section className="py-64 sm:py-80 xl:py-120 bg-white px-20 sm:px-40 lg:px-48 xl:px-95 [[data-white-section]+&]:pt-0!">
-        <PageIntro label={quote.label} title={quote.title} highlight={quote.titleHighlight} description={quote.description} />
-        <div className="mt-36 flex flex-col gap-24 lg:flex-row lg:items-start xl:mt-40 xl:gap-34">
-          <div className="lg:w-[52%] xl:w-861 xl:shrink-0">
-            <EnquiryForm form={quote.form} size="quote" />
-          </div>
-          <QuoteAside />
-        </div>
-        <div className="mt-28 xl:mt-32">
-          <HighlightStrip items={quote.highlights} />
-        </div>
-      </section>
-    </>
+    <main className="flex-1">
+      <Breadcrumb data={commonData.quoteBreadcrumb} ui={commonData.globalUI} />
+      <Quote
+        data={sectionData.Quote?.variants?.LogisticsQuote1}
+        company={commonData.company}
+        formOptions={commonData.formOptions}
+        services={services}
+        ui={commonData.globalUI}
+      />
+    </main>
   );
 }

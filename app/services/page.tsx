@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import Cta from "@/components/Cta";
-import { site as data, pageTitle } from "@/data";
-import ServiceGrid from "@/components/ServiceGrid";
+import rawData from "@/data/templates.json";
+import type { LogisticsTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { ServiceGrid } from "@/components/sections/ServiceGrid";
+import { Cta } from "@/components/sections/Cta";
 
-const { title } = data.pages.services;
+const templateData: LogisticsTemplateData = rawData;
+const sectionData = templateData.categories.Logistics.sections;
+const commonData = templateData.common;
 
-export const metadata: Metadata = { title: pageTitle(title) };
+export const metadata: Metadata = { ...commonData.servicesBreadcrumb?.seo };
 
 export default function ServicesPage() {
   return (
-    <>
-      <PageBanner title={title} />
-      <ServiceGrid />
-      <Cta />
-    </>
+    <main className="flex-1">
+      <Breadcrumb data={commonData.servicesBreadcrumb} ui={commonData.globalUI} />
+      <ServiceGrid data={sectionData.Services?.variants?.LogisticsServices1} ui={commonData.globalUI} />
+      <Cta data={sectionData.Cta?.variants?.LogisticsCta1} />
+    </main>
   );
 }

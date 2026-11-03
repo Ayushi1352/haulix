@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import { site as data, pageTitle } from "@/data";
-import GalleryGrid from "@/components/GalleryGrid";
+import rawData from "@/data/templates.json";
+import type { LogisticsTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { Gallery } from "@/components/sections/Gallery";
 
-const { title } = data.pages.gallery;
+const templateData: LogisticsTemplateData = rawData;
+const sectionData = templateData.categories.Logistics.sections;
+const commonData = templateData.common;
+const gallery = sectionData.Gallery?.variants?.LogisticsGallery1;
 
-export const metadata: Metadata = { title: pageTitle(title) };
+export const metadata: Metadata = { ...commonData.galleryBreadcrumb?.seo };
 
 export default function GalleryPage() {
   return (
-    <>
-      <PageBanner title={title} />
-      <GalleryGrid />
-    </>
+    <main className="flex-1">
+      <Breadcrumb data={commonData.galleryBreadcrumb} ui={commonData.globalUI} />
+      {gallery && <Gallery data={gallery} ui={commonData.globalUI} />}
+    </main>
   );
 }

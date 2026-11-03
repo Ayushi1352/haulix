@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import { site as data, pageTitle } from "@/data";
-import BlogGrid from "@/components/BlogGrid";
+import rawData from "@/data/templates.json";
+import type { LogisticsTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { BlogGrid } from "@/components/sections/BlogGrid";
 
-const { title } = data.pages.blogs;
+const templateData: LogisticsTemplateData = rawData;
+const sectionData = templateData.categories.Logistics.sections;
+const commonData = templateData.common;
 
-export const metadata: Metadata = { title: pageTitle(title) };
+export const metadata: Metadata = { ...commonData.blogsBreadcrumb?.seo };
 
 export default function BlogsPage() {
   return (
-    <>
-      <PageBanner title={title} />
-      <BlogGrid />
-    </>
+    <main className="flex-1">
+      <Breadcrumb data={commonData.blogsBreadcrumb} ui={commonData.globalUI} />
+      <BlogGrid data={sectionData.Blogs?.variants?.LogisticsBlogs1} ui={commonData.globalUI} />
+    </main>
   );
 }

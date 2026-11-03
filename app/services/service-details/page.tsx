@@ -1,32 +1,24 @@
 import type { Metadata } from "next";
-import PageBanner from "@/components/PageBanner";
-import { site as data, pageTitle } from "@/data";
-import ServiceSidebar from "@/components/ServiceSidebar";
-import ServiceOverview from "@/components/ServiceOverview";
-import ServiceBenefits from "@/components/ServiceBenefits";
+import rawData from "@/data/templates.json";
+import type { LogisticsTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { ServiceDetail } from "@/components/sections/ServiceDetail";
 
-const { pages, services } = data;
-
+const templateData: LogisticsTemplateData = rawData;
+const sectionData = templateData.categories.Logistics.sections;
+const commonData = templateData.common;
+const services = sectionData.Services?.variants?.LogisticsServices1?.items ?? [];
 // One common detail page for every service: all service links point here and it shows the first service.
-// The banner and breadcrumb carry the common page title from site.json, not the service title.
-const service = services.items[0];
-const { title } = pages.serviceDetail;
+// The banner and breadcrumb carry the common page title from templates.json, not the service title.
+const service = services[0];
 
-export const metadata: Metadata = { title: pageTitle(title) };
+export const metadata: Metadata = { ...commonData.serviceDetailBreadcrumb?.seo };
 
-export default function ServiceDetailPage() {
+export default function ServiceDetailsPage() {
   return (
-    <>
-      <PageBanner title={title} crumbs={[{ label: pages.services.title, href: "/services" }, { label: title }]} />
-      <section data-white-section className="bg-white px-20 py-64 sm:px-40 sm:py-80 lg:px-48 xl:px-88 xl:py-120 [[data-white-section]+&]:pt-0!">
-        <div className="flex flex-col-reverse gap-48 lg:flex-row lg:items-start lg:gap-40 xl:gap-52">
-          <ServiceSidebar active={service} />
-          <div className="min-w-0 flex-1">
-            <ServiceOverview service={service} />
-            <ServiceBenefits benefits={service.benefits} />
-          </div>
-        </div>
-      </section>
-    </>
+    <main className="flex-1">
+      <Breadcrumb data={commonData.serviceDetailBreadcrumb} ui={commonData.globalUI} />
+      <ServiceDetail data={sectionData.ServiceDetail?.variants?.LogisticsServiceDetail1} service={service} services={services} company={commonData.company} />
+    </main>
   );
 }

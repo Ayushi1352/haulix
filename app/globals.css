@@ -1,18 +1,14 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  /*
-    The design is drawn on a 1920px wide canvas. Every spacing utility is one
-    "design pixel" (w-552 = 552px in the design). From 1024px up the root font
-    size follows the viewport (see <html> in app/layout.tsx), so the desktop
-    layout keeps the design's exact proportions on every screen.
-  */
-  --spacing: 0.0625rem;
-  /* Desktop layout (xl:) starts at 1024px, so 1024 shows the same design as 1440. */
-  --breakpoint-xl: 64rem;
-
-  /* Brand colours. These are only defaults: site.json (theme.colors) overrides them in app/layout.tsx. */
+:root {
+  --color-white: #ffffff;
   --color-brand: #851210;
+  --color-brand-dark: #6a0e0d;
+  /* Hover is the brand colour a little lighter, so it follows the brand colour. */
+  --color-brand-hover: oklch(from var(--color-brand) calc(l + 0.06) c h);
+  --color-brand-tint: oklch(from var(--color-brand) calc(l + 0.3) c h);
   --color-ink: #052e36;
   --color-deep: #032a33;
   --color-ocean: #022e3e;
@@ -26,13 +22,90 @@
   --color-cloud: #f6f6f7;
   --color-mist: #f3f6f8;
   --color-line: #e3e7ea;
+  /* Success message on the forms */
+  --color-success: #1d7a46;
+  --color-success-bg: #eef8f2;
+  --color-success-border: #bfe3cd;
+  --color-success-heading: #145c34;
+  --color-success-hover: #d7efe0;
+  --color-success-text: #2f5d43;
+  /* See-through versions (the number is the opacity) */
+  --color-brand-25: rgba(133, 18, 16, 0.25);
+  --color-brand-30: rgba(133, 18, 16, 0.3);
+  --color-brand-50: rgba(133, 18, 16, 0.5);
+  --color-brand-hover-50: color-mix(in srgb, var(--color-brand-hover) 50%, transparent);
+  --color-brand-hover-60: color-mix(in srgb, var(--color-brand-hover) 60%, transparent);
+  --color-ink-90: rgba(5, 46, 54, 0.9);
+  --color-heading-85: rgba(5, 46, 54, 0.85);
+  --color-heading-90: rgba(5, 46, 54, 0.9);
+  --color-deep-10: rgba(3, 42, 51, 0.1);
+  --color-deep-12: rgba(3, 42, 51, 0.12);
+  --color-deep-15: rgba(3, 42, 51, 0.15);
+  --color-deep-30: rgba(3, 42, 51, 0.3);
+  --color-deep-35: rgba(3, 42, 51, 0.35);
+  --color-deep-40: rgba(3, 42, 51, 0.4);
+  --color-deep-55: rgba(3, 42, 51, 0.55);
+  --color-deep-60: rgba(3, 42, 51, 0.6);
+  --color-deep-80: rgba(3, 42, 51, 0.8);
+  --color-deep-85: rgba(3, 42, 51, 0.85);
+  --color-deep-90: rgba(3, 42, 51, 0.9);
+  --color-ocean-55: rgba(2, 46, 62, 0.55);
+  --color-ocean-82: rgba(2, 46, 62, 0.82);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-15: rgba(255, 255, 255, 0.15);
+  --color-white-25: rgba(255, 255, 255, 0.25);
+  --color-white-40: rgba(255, 255, 255, 0.4);
+  --color-white-45: rgba(255, 255, 255, 0.45);
+  --color-white-55: rgba(255, 255, 255, 0.55);
+  --color-white-70: rgba(255, 255, 255, 0.7);
+  --color-white-85: rgba(255, 255, 255, 0.85);
+  --color-white-90: rgba(255, 255, 255, 0.9);
+  --color-white-92: rgba(255, 255, 255, 0.92);
+  --color-white-95: rgba(255, 255, 255, 0.95);
+  /* Shadows and image overlays */
+  --color-overlay-50: rgba(6, 24, 30, 0.5);
+  --color-overlay-60: rgba(6, 24, 30, 0.6);
+  --color-shadow-teal-6: rgba(10, 50, 60, 0.06);
+  --color-shadow-ink-4: rgba(10, 40, 50, 0.04);
+  --color-shadow-ink-5: rgba(10, 40, 50, 0.05);
+  --color-shadow-ink-6: rgba(10, 40, 50, 0.06);
+  --color-shadow-ink-7: rgba(10, 40, 50, 0.07);
+  --color-shadow-ink-8: rgba(10, 40, 50, 0.08);
+  --color-shadow-ink-9: rgba(10, 40, 50, 0.09);
+  --color-shadow-ink-10: rgba(10, 40, 50, 0.1);
+  --color-shadow-ink-12: rgba(10, 40, 50, 0.12);
+  --color-shadow-ink-14: rgba(10, 40, 50, 0.14);
+  --color-shadow-ink-15: rgba(10, 40, 50, 0.15);
+  --color-shadow-ink-16: rgba(10, 40, 50, 0.16);
+  --color-shadow-black-8: rgba(0, 0, 0, 0.08);
+  --color-shadow-black-10: rgba(0, 0, 0, 0.1);
+  --color-shadow-black-12: rgba(0, 0, 0, 0.12);
+  --color-shadow-black-16: rgba(0, 0, 0, 0.16);
+  --color-shadow-black-25: rgba(0, 0, 0, 0.25);
+}
 
-  /* Hover is the brand colour a little lighter, so it follows any brand colour. */
-  --color-brand-hover: oklch(from var(--color-brand) calc(l + 0.06) c h);
+html,
+body {
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
 
-  /* Fonts from site.json (theme.fonts) via app/fonts.generated.ts; the second part is the fallback. */
-  --font-heading: var(--font-heading-face, sans-serif);
-  --font-body: var(--font-body-face, sans-serif);
-  --font-nav: var(--font-nav-face, sans-serif);
-  --font-display: var(--font-display-face, sans-serif);
+body {
+  background-color: var(--color-cloud);
+  color: var(--color-heading);
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: var(--color-white);
 }
