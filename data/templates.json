@@ -2025,6 +2025,278 @@
             }
           }
         }
+      },
+      "templateComponents": {
+        "shared": {
+          "Header": "LogisticsHeader1",
+          "Footer": "common.Footer"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Hero",
+                "component": "LogisticsHero1"
+              },
+              {
+                "key": "AboutUs",
+                "component": "LogisticsAboutUs1"
+              },
+              {
+                "key": "Stats",
+                "component": "LogisticsStats1"
+              },
+              {
+                "key": "Services",
+                "component": "LogisticsServices1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "LogisticsWhyChooseUs1"
+              },
+              {
+                "key": "Cta",
+                "component": "LogisticsCta1"
+              },
+              {
+                "key": "Testimonials",
+                "component": "LogisticsTestimonials1"
+              },
+              {
+                "key": "Blogs",
+                "component": "LogisticsBlogs1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "about-us": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.aboutBreadcrumb"
+              },
+              {
+                "key": "AboutUs",
+                "component": "LogisticsAboutUs1"
+              },
+              {
+                "key": "Stats",
+                "component": "LogisticsStats1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "LogisticsWhyChooseUs1"
+              },
+              {
+                "key": "Cta",
+                "component": "LogisticsCta1"
+              },
+              {
+                "key": "Testimonials",
+                "component": "LogisticsTestimonials1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.servicesBreadcrumb"
+              },
+              {
+                "key": "Services",
+                "component": "LogisticsServices1"
+              },
+              {
+                "key": "Cta",
+                "component": "LogisticsCta1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "service-details": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.serviceDetailBreadcrumb"
+              },
+              {
+                "key": "ServiceDetail",
+                "component": "LogisticsServiceDetail1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "blogs": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.blogsBreadcrumb"
+              },
+              {
+                "key": "Blogs",
+                "component": "LogisticsBlogs1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "blog-details": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.blogDetailBreadcrumb"
+              },
+              {
+                "key": "BlogDetail",
+                "component": "LogisticsBlogDetail1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "our-team": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.teamBreadcrumb"
+              },
+              {
+                "key": "Team",
+                "component": "LogisticsTeam1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "testimonials": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.testimonialsBreadcrumb"
+              },
+              {
+                "key": "Testimonials",
+                "component": "LogisticsTestimonials1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "gallery": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.galleryBreadcrumb"
+              },
+              {
+                "key": "Gallery",
+                "component": "LogisticsGallery1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "get-a-quote": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.quoteBreadcrumb"
+              },
+              {
+                "key": "Quote",
+                "component": "LogisticsQuote1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          },
+          "contact-us": {
+            "components": [
+              {
+                "key": "Header",
+                "component": "LogisticsHeader1"
+              },
+              {
+                "key": "Breadcrumb",
+                "component": "common.contactBreadcrumb"
+              },
+              {
+                "key": "Contact",
+                "component": "LogisticsContact1"
+              },
+              {
+                "key": "Footer",
+                "component": "common.Footer"
+              }
+            ]
+          }
+        }
       }
     }
   }

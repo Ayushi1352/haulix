@@ -383,11 +383,25 @@ export interface LogisticsSections {
   Quote: Variants<QuoteData>;
 }
 
+export interface TemplateComponentEntry {
+  key: string;
+  component: string;
+}
+
+export interface TemplateComponentsData {
+  shared: {
+    Header: string;
+    Footer: string;
+  };
+  pages: Record<string, { components: TemplateComponentEntry[] }>;
+}
+
 export interface LogisticsTemplateData {
   common: CommonData;
   categories: {
     Logistics: {
       sections: LogisticsSections;
+      templateComponents: TemplateComponentsData;
     };
   };
 }
